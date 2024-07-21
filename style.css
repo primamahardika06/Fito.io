@@ -88,12 +88,13 @@ section .left .BMI-button button {
     font-size: 16px;
     border-radius: 8px;
     color: whitesmoke;
-    background-color: var(--color-green);
+    background-color: var(--color-blue);
     cursor: pointer;
     padding: 16px 32px;
     width:50%;
     transition: .5s;
 }
 section .left .BMI-button button:hover {
-    background-color:rgba(23, 209, 23, 0.347);
+    background-color: rgba(4, 21, 103, 0.34);
 }
+/* Hero section end */

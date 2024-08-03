@@ -184,13 +184,13 @@ section.second_section .card ::before {
     height: 70px;
     width: 70px;
     border-radius: 50%;
+    border: 2px solid black;
     background: #589E54;
     left: 35%;
 }
 
 section.second_section .card1 ::before {
     content: '1';
- 
     color: white;
     bottom: 30vh;
 }

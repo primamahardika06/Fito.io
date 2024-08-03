@@ -23,8 +23,11 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     padding: 24px 32px;
+    width: 100%;
+    z-index: 999;
     background-color: white;
     font-family: var(--font-family2);
+    position: fixed;
 }
 
 nav .title {

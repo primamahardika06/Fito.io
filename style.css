@@ -1,326 +1,398 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-    height: 3000px;
-    overflow-x: hidden;
+  height: 3000px;
+  overflow-x: hidden;
 }
 
 :root {
-    --font-family1: "Poppins", sans-serif;
-    --font-family2: "Rubik", sans-serif;
-    --color-green: #589E54;
-    --color-green2: #8BC888;
-
-    ;
+  --font-family1: "Poppins", sans-serif;
+  --font-family2: "Rubik", sans-serif;
+  --color-green: #589e54;
+  --color-green2: #8bc888;
 }
 
 /* Nav start */
 nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 24px 32px;
-    width: 100%;
-    z-index: 999;
-    background-color: white;
-    font-family: var(--font-family2);
-    position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px 32px;
+  width: 100%;
+  z-index: 999;
+  background-color: white;
+  font-family: var(--font-family2);
+  position: fixed;
 }
 
 nav .title {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    flex-direction: row;
-    font-size: 20px;
-    cursor: pointer;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 nav .title img {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 nav .title a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-green);
 }
 
 nav a {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    transition: .5s;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  transition: 0.5s;
 }
 
 .Navbar {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    cursor: pointer;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  cursor: pointer;
 }
 
 .Navbar button {
-    padding: 8px 48px;
-    border-radius: 4px;
-    border: none;
-    color: whitesmoke;
-    background-color: var(--color-green2);
-    transition: .5s;
-    cursor: pointer;
+  padding: 8px 48px;
+  border-radius: 4px;
+  border: none;
+  color: whitesmoke;
+  background-color: var(--color-green2);
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 .Navbar button:hover {
-    background-color: white;
-    color: #8BC888;
+  background-color: white;
+  color: #8bc888;
 }
 
-
 .Navbar a:hover {
-    color: var(--color-green);
-    border-bottom: 1px solid var(--color-green);
-
+  color: var(--color-green);
+  border-bottom: 1px solid var(--color-green);
 }
 
 /* Nav End */
 
 /* Hero section start */
 section.hero_section {
-    display: flex;
-    align-items: center;
-    font-family: var(--font-family2);
-    justify-content: center;
-    color: whitesmoke;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--color-green2);
+  display: flex;
+  align-items: center;
+  font-family: var(--font-family2);
+  justify-content: center;
+  color: whitesmoke;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-green2);
 }
 
 section.hero_section .teks {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 20px;
-    text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  text-decoration: none;
 }
 
 section.hero_section .teks h1 {
-    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.559);
-    font-size: 80px;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.559);
+  font-size: 80px;
 }
 
 section.hero_section .teks p {
-    font-size: 24px;
-    font-weight: 200;
+  font-size: 24px;
+  font-weight: 200;
 }
 
 section.hero_section .teks button {
-    box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.228);
-    border: none;
-    border-radius: 8px;
-    padding: 8px 60px;
-    cursor: pointer;
-    transition: .5s;
+  box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.228);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 60px;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 section.hero_section .teks button:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* Hero section end */
 
 /* Second Section Start */
 section.second_section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--font-family2);
-    margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family2);
+  margin-top: 48px;
 }
 
 section.second_section .title2 h1 {
-    display: flex;
-    text-align: center;
-    text-shadow: 8px 8px 6px rgba(0, 0, 0, 0.559);
+  display: flex;
+  text-align: center;
+  text-shadow: 8px 8px 6px rgba(0, 0, 0, 0.559);
 }
 
 section.second_section .card_manfaat {
-    display: flex;
-    margin-top: 100px;
-    gap: 32px;
-    flex-direction: row;
+  display: flex;
+  margin-top: 100px;
+  gap: 32px;
+  flex-direction: row;
 }
 
 section.second_section .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 section.second_section .card img {
-    border-radius: 12px;
-    background-size: cover;
-    border: 2px solid black;
-    width: 300px;
-    height: 300px;
+  border-radius: 12px;
+  background-size: cover;
+  border: 2px solid black;
+  width: 300px;
+  height: 300px;
 }
 
 section.second_section .card p {
-    display: flex;
-    font-size: 20px;
-    position: absolute;
-    text-align: center;
-    margin-top: 74vh;
-    width: 250px;
+  display: flex;
+  font-size: 20px;
+  position: absolute;
+  text-align: center;
+  margin-top: 74vh;
+  width: 250px;
 }
 
 section.second_section .card ::before {
-    content: '';
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    background: #589E54;
-    left: 38%;
+  content: "";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: #589e54;
+  left: 38%;
 }
 
 section.second_section .card1 ::before {
-    content: '1';
-    color: white;
-    bottom: 27vh;
+  content: "1";
+  color: white;
+  bottom: 27vh;
 }
 
 section.second_section .card2 ::before {
-    content: '2';
-    color: white;
-    bottom: 24vh;
+  content: "2";
+  color: white;
+  bottom: 24vh;
 }
 
 section.second_section .card3 ::before {
-    content: '3';
-    color: white;
-    bottom: 25vh;
+  content: "3";
+  color: white;
+  bottom: 25vh;
 }
 
 section.second_section .card4 ::before {
-    content: '4';
-    color: white;
-    bottom: 20vh;
+  content: "4";
+  color: white;
+  bottom: 20vh;
 }
 
 /* Second Section End */
 
-
 /* Artikel Start */
 section.artikel_section {
-    margin-top: 50vh;
-    padding: 12px 48px;
-    font-family: var(--font-family2);
+  margin-top: 50vh;
+  padding: 12px 48px;
+  font-family: var(--font-family2);
 }
 
 .artikel {
-    display: flex;
-    flex-direction: column;
-    padding: 12px 16px;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px;
+  gap: 20px;
 }
 
 .artikel .kiri_artikel {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .artikel .kiri_artikel img {
-    width: 800px;
-    height: 500px;
+  width: 800px;
+  height: 500px;
 }
 
 .artikel .detail_artikel {
-    display: flex;
-    flex-direction: row;
-    gap: 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
 }
 
 .artikel .kanan_artikel {
-    display: flex;
-    flex-direction: column;
-    height: 65vh;
-    width: 100%;
-    overflow: auto;
-    gap: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 65vh;
+  width: 100%;
+  overflow: auto;
+  gap: 30px;
 }
 
 .artikel .kanan_artikel img {
-    width: 150px;
-    height: 100px;
+  width: 150px;
+  height: 100px;
 }
 
 .artikel .kanan_artikel .detail_img a {
-    display: flex;
-    gap: 12px;
-    flex-direction: row;
-    height: 100%;
-    text-decoration: none;
-    color: black;
+  display: flex;
+  gap: 12px;
+  flex-direction: row;
+  height: 100%;
+  text-decoration: none;
+  color: black;
 }
 
 .detail_teks {
-    display: flex;
-    gap: 4px;
-    flex-direction: column;
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
 }
 
 .detail_sumber {
-    display: flex;
-    flex-direction: row;
-    gap: 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
 }
 
 .detail_teks .sumber {
-    padding: 0px 8px;
-    border-radius: 4px;
-    background-color: var(--color-green);
-    color: white;
+  padding: 0px 8px;
+  border-radius: 4px;
+  background-color: var(--color-green);
+  color: white;
 }
 
 .detail_teks .tanggal {
-    color: grey;
+  color: grey;
 }
 
-.artikel2{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 10vh;
-    padding: 12px 16px;
+.artikel2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 10vh;
+  padding: 12px 16px;
 }
 
-.detail_artikel2{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 40px;
+.detail_artikel2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 40px;
 }
-.detail_artikel2 img{
-    width: 300px;
-    height: 200px;
+.detail_artikel2 img {
+  width: 300px;
+  height: 200px;
 }
-
-
-
-
-
-
 
 /* Artikel End */
+
+/* bmi section start*/
+.bmi_main {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 50px;
+}
+
+.bmi_main .bmi_title {
+  margin-top: 100px;
+}
+
+.bmi_main .bmi_gender {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 20px;
+  margin-top: 70px;
+}
+
+.bmi_gender .gender_pria {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 100px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+
+.bmi_gender .gender_pria .title_pria {
+  display: flex;
+  margin-top: 5px;
+}
+
+.bmi_gender .gender_pria img {
+  background-color: gray;
+  border-radius: 50%;
+  height: 85px;
+  width: 85px;
+}
+
+.bmi_gender .gender_wanita {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 100px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+
+.bmi_gender .gender_wanita .title_wanita {
+  display: flex;
+  margin-left: 12px;
+  margin-top: 5px;
+}
+
+.bmi_gender .gender_wanita img {
+  background-color: gray;
+  border-radius: 50%;
+  height: 85px;
+  width: 85px;
+}
+
+.bmi_main .bmi_input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+  gap: 40px;
+}
+
+.bmi_main .bmi_input {
+}
+
+.bmi_main .bmi_input input {
+  width: 600px;
+  height: 35px;
+}
+
+.bmi_main .bmi_input p {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* bmi section end*/

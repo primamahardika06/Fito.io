@@ -1,79 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Nav Start -->
-    <nav>
-      <div class="title">
-        <a href="#">
-          <img src="assets/logo_fito.png" alt="" />
-          <h1>FiTo</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <!-- Nav Start -->
+  <nav>
+    <div class="title">
+      <a href="index.html">
+        <img src="assets/logo_fito.png" alt="" />
+        <h1>FiTo</h1>
+      </a>
+    </div>
+
+    <div class="Navbar">
+      <a href="index.html">Home</a>
+      <a href="index.html#manfaat">Solutions</a>
+      <a href="">Community</a>
+      <a href="index.html#artikel">Article</a>
+      <a href="">Contact</a>
+      <a href="">
+        <button>MULAI !</button>
+      </a>
+    </div>
+  </nav>
+  <!-- Nav End -->
+
+  <!-- bmi main start -->
+
+  <section  class="bmi_main">
+    <div class="bmi_title">
+      <h1>Body Massa Index</h1>
+      <p>Kita cek index massa tubuhmu dulu ya</p>
+    </div>
+
+    <div class="bmi_gender">
+      <div class="gender_pria">
+        <div class="img_pria">
+          <img src="assets/pria.png" alt="" />
+        </div>
+        <div class="title_pria">
+          <p>Pria</p>
+        </div>
+      </div>
+      <div class="gender_wanita">
+        <div class="img_wanita">
+          <img src="assets/wanita.png" alt="" />
+        </div>
+        <div class="title_wanita">
+          <p>Wanita</p>
+        </div>
+      </div>
+    </div>
+
+    <form id="bmiHasil" class="bmi_input" id="bmiForm">
+      <div class="bmi_tinggi" id="height">
+        <p>Tinggi Badan :</p>
+        <input id="heightInput" type="number" placeholder="Berapa Tinggi Kamu (cm)" />
+      </div>
+      <div class="bmi_berat" id="weightt" >
+        <p>Berat Badan :</p>
+        <input id="weightInput" type="number" placeholder="Berapa Berat Kamu (kg)"  />
+      </div>
+
+      <div class="button_bmi">
+        <a href="#bmiHasil">
+          <button type="button" onclick="calculateBMI()">Cek Sekarang</button>
         </a>
       </div>
-
-      <div class="Navbar">
-        <a href="#">Home</a>
-        <a href="#manfaat">Solutions</a>
-        <a href="">Community</a>
-        <a href="#artikel">Article</a>
-        <a href="">Contact</a>
-        <a href="">
-          <button>MULAI !</button>
-        </a>
+    </form>
+    
+    
+    <div class="bmi_hasil hidden">
+      <div class="detail_hasil">
+        <h1>BMI kamu adalah</h1>
+        <p id="bmi" class="bmi_angka">0</p>
+        <p id="desc" class="bmi_desc">N/A</p>
+        <p class="bmi_saran">Perbanyak Olahraga</p>
       </div>
-    </nav>
-    <!-- Nav End -->
-
-    <!-- bmi main start -->
-
-    <section class="bmi_main">
-      <div class="bmi_title">
-        <h1>Body Massa Index</h1>
-        <p>Kita cek index massa tubuhmu dulu ya</p>
-      </div>
-
-      <div class="bmi_gender">
-        <div class="gender_pria">
-          <div class="img_pria">
-            <img src="assets/pria.png" alt="" />
-          </div>
-          <div class="title_pria">
-            <p>Laki - laki</p>
-          </div>
+  
+      <div class="bmi_scale">
+        <div style="--color:var(--kurus)">
+          <h4>Kurus</h4>
+          <p>&lt; 18,5</p>
         </div>
-        <div class="gender_wanita">
-          <div class="img_wanita">
-            <img src="assets/wanita.png" alt="" />
-          </div>
-          <div class="title_wanita">
-            <p>Wanita</p>
-          </div>
+        <div style="--color:var(--normal)">
+          <h4>Normal</h4>
+          <p>18,5-24,9</p>
+        </div>
+        <div style="--color:var(--gemuk)">
+          <h4>Gemuk</h4>
+          <p>25-30</p>
+        </div>
+        <div style="--color:var(--obesitas)">
+          <h4>Obesitas</h4>
+          <p>> 30</p>
         </div>
       </div>
-      <div class="bmi_input">
-        <div class="bmi_tinggi">
-          <p>Tinggi Badan :</p>
-          <input type="number" placeholder="Berapa Tinggi Kamu (cm)" />
-        </div>
-        <div class="bmi_berat">
-          <p>Berat Badan :</p>
-          <input type="number" placeholder="Berapa Berat Kamu (kg)" />
-        </div>
-      </div>
+    </div>
+  </section>
 
-      <div class="bmi_enter"></div>
+  <!-- bmi main end -->
+</body>
 
-      <div class="bmi_hasil">
-        <div class="bmi_hasil_text"></div>
-        <div class="bmi_hasil_img"></div>
-      </div>
-    </section>
-
-    <!-- bmi main end -->
-  </body>
 </html>

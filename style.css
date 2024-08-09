@@ -15,6 +15,10 @@ body {
   --font-family2: "Rubik", sans-serif;
   --color-green: #589e54;
   --color-green2: #8bc888;
+  --kurus:blue;
+  --normal:green;
+  --gemuk:orange;
+  --obesitas:red;
 }
 
 /* Nav start */
@@ -318,6 +322,7 @@ section.artikel_section {
 .bmi_main {
   display: flex;
   flex-direction: column;
+  font-family: var(--font-family2);
   padding: 12px 50px;
 }
 
@@ -343,6 +348,7 @@ section.artikel_section {
 
 .bmi_gender .gender_pria .title_pria {
   display: flex;
+  margin-left: 24px;
   margin-top: 5px;
 }
 
@@ -382,8 +388,6 @@ section.artikel_section {
   gap: 40px;
 }
 
-.bmi_main .bmi_input {
-}
 
 .bmi_main .bmi_input input {
   width: 600px;
@@ -395,4 +399,67 @@ section.artikel_section {
   font-size: 18px;
 }
 
+.button_bmi{
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+.button_bmi button{
+  padding: 12px 32px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: .5s;
+}
+.button_bmi button:hover{
+  transform: scale(1.1);
+  background-color: var(--color-green2);
+  color: white;
+
+}
+
+.bmi_hasil{
+  display: flex;
+ 
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
+  margin-top: 100px;
+}
+
+.hidden{
+   display: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; 
+  appearance: textfield; 
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.bmi_scale{
+  display: flex;
+  flex-direction: row;
+}
+
+.bmi_scale div{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 12px 32px;
+  text-transform: uppercase;
+  border-top: 5px solid var(--color);
+}
+
+
 /* bmi section end*/
+
+
+
+
+

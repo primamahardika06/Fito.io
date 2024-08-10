@@ -1,3 +1,5 @@
+
+// BMI Start
 function limitInputLength(element, maxLength) {
     element.addEventListener('input', function() {
         // Hanya membatasi angka jika lebih dari maxLength
@@ -54,6 +56,28 @@ function limitInputLength(element, maxLength) {
             const heightInput = document.getElementById('heightInput');
             const weightInput = document.getElementById('weightInput');
     
-            limitInputLength(heightInput, 3); // Maksimal 3 digit
-            limitInputLength(weightInput, 3); // Maksimal 3 digit
+            limitInputLength(heightInput, 3); 
+            limitInputLength(weightInput, 3); 
         }
+
+        // BMI End
+
+        // Loader Start
+        document.addEventListener("DOMContentLoaded", function() {
+            const loaderContainer = document.querySelector('.loader-container');
+            const loaderVideo = loaderContainer.querySelector('video');
+        
+            loaderVideo.play();
+        
+            loaderVideo.onended = function() {
+                document.body.classList.add('loaded');
+            };
+        
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    document.body.classList.add('loaded');
+                }, 6500); 
+            });
+        });
+
+        // Loader End

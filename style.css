@@ -6,7 +6,6 @@
 }
 
 body {
-  height: 3000px;
   overflow-x: hidden;
 }
 
@@ -15,10 +14,10 @@ body {
   --font-family2: "Rubik", sans-serif;
   --color-green: #589e54;
   --color-green2: #8bc888;
-  --kurus:blue;
-  --normal:green;
-  --gemuk:orange;
-  --obesitas:red;
+  --kurus: blue;
+  --normal: green;
+  --gemuk: orange;
+  --obesitas: red;
 }
 
 /* Nav start */
@@ -311,6 +310,7 @@ section.artikel_section {
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 40px;
 }
+
 .detail_artikel2 img {
   width: 300px;
   height: 200px;
@@ -399,28 +399,30 @@ section.artikel_section {
   font-size: 18px;
 }
 
-.button_bmi{
+.button_bmi {
   display: flex;
   justify-content: center;
   margin-top: 32px;
 }
-.button_bmi button{
+
+.button_bmi button {
   padding: 12px 32px;
   border-radius: 12px;
   border: none;
   cursor: pointer;
   transition: .5s;
 }
-.button_bmi button:hover{
+
+.button_bmi button:hover {
   transform: scale(1.1);
   background-color: var(--color-green2);
   color: white;
 
 }
 
-.bmi_hasil{
+.bmi_hasil {
   display: flex;
- 
+
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -428,26 +430,27 @@ section.artikel_section {
   margin-top: 100px;
 }
 
-.hidden{
-   display: none;
+.hidden {
+  display: none;
 }
 
 input[type="number"] {
-  -moz-appearance: textfield; 
-  appearance: textfield; 
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.bmi_scale{
+.bmi_scale {
   display: flex;
   flex-direction: row;
 }
 
-.bmi_scale div{
+.bmi_scale div {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -474,7 +477,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .loader-container video {
   overflow: hidden;
-  width: 500px; 
+  width: 300px;
   height: auto;
 }
 
@@ -486,7 +489,67 @@ body.loaded .loader-container {
 
 /* loader end */
 
+/* Footer Start */
+footer {
+  display: flex;
+  margin-top: 50vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  border-top: 2px solid #589e54;
+  padding-top: 20px;
+  gap: 12px;
+}
+
+.nav_footer {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  font-family: var(--font-family1);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.nav_footer a {
+  text-decoration: none;
+  color: black;
+}
 
 
+.nav_footer a:hover {
+  color: var(--color-green);
+  border-bottom: 1px solid var(--color-green);
+}
+
+.sosmed{
+  display: flex;
+  gap: 12px;
+  font-size: 28px;
+  cursor: pointer;
+}
+.sosmed .bx{
+  background-color: black;
+  color: white;
+  padding: 12px 12px;
+  border-radius: 50%;
+  transition: .5s;
+}
+
+.sosmed .bx:hover {
+  color: var(--color-green);
+  background-color: white;
+  transform: scale(1.1);
+}
+
+.Copyright {
+  display: flex;
+  justify-content: center;
+  background-color: #589e54;
+  color: whitesmoke;
+  width: 100%;
+  padding: 12px;
+}
 
 
+/* Footer End */

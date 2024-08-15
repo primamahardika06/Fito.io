@@ -164,12 +164,18 @@ section.second_section .card {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 0px 12px 0px rgb(132, 131, 131);
+  border-radius: 12px;
+  padding-bottom: 35vh;
+  
 }
 
 section.second_section .card img {
-  border-radius: 12px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom: 2px solid #589e54;
   background-size: cover;
-  border: 2px solid black;
   width: 300px;
   height: 300px;
 }
@@ -224,7 +230,7 @@ section.second_section .card4 ::before {
 
 /* Artikel Start */
 section.artikel_section {
-  margin-top: 50vh;
+  margin-top: 20vh;
   padding: 12px 48px;
   font-family: var(--font-family2);
 }
@@ -243,6 +249,7 @@ section.artikel_section {
 .artikel .kiri_artikel img {
   width: 800px;
   height: 500px;
+  border-radius:12px;
 }
 
 .artikel .detail_artikel {
@@ -263,6 +270,7 @@ section.artikel_section {
 .artikel .kanan_artikel img {
   width: 150px;
   height: 100px;
+  border-radius:12px;
 }
 
 .artikel .kanan_artikel .detail_img a {
@@ -307,13 +315,92 @@ section.artikel_section {
 
 .detail_artikel2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
 }
 
 .detail_artikel2 img {
   width: 300px;
   height: 200px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.detail_teks2 {
+  padding: 12px 16px;
+}
+
+.card_artikel{
+  background-color: whitesmoke;
+  box-shadow: 2px 0px 12px 0px rgb(132, 131, 131);
+  padding-bottom: 8px;
+  width: 300px;
+  border-radius: 12px;
+  transition: .5s;
+}
+
+.card_artikel:hover{
+  transform: scale(0.9);
+}
+
+.card_artikel a{
+ text-decoration: none;
+}
+
+.card_artikel .detail_teks2{
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap:8px;
+}
+
+.card_artikel .detail_teks2 .detail_sumber2{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.detail_sumber2 .sumber{
+  padding: 0px 8px;
+  border-radius: 4px;
+  background-color: var(--color-green);
+  color: white;
+}
+
+.detail_sumber2 .tanggal {
+  color: grey;
+}
+
+.selengkapnya{
+  display: grid;
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.selengkapnya img {
+  width: 300px;
+  height: 200px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+#read-more{
+  display: flex;
+  align-self: center;
+  margin-top:20px ;
+  padding: 12px 32px;
+  border-radius: 8px;
+  border: none;
+  background-color: #589e54;
+  color: white;
+  transition: .5s;
+  cursor: pointer;
+}
+
+#read-more:hover{
+  color: var(--color-green);
+  background-color: #ffffff;
 }
 
 /* Artikel End */
@@ -486,7 +573,6 @@ body.loaded .loader-container {
   display: none;
 }
 
-
 /* loader end */
 
 /* Footer Start */
@@ -496,8 +582,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: whitesmoke;
-  border-top: 2px solid #589e54;
+  border-top: 1px solid #589e54;
   padding-top: 20px;
   gap: 12px;
 }
@@ -525,13 +610,12 @@ footer {
 .sosmed{
   display: flex;
   gap: 12px;
-  font-size: 28px;
+  font-size: 20px;
   cursor: pointer;
 }
 .sosmed .bx{
-  background-color: black;
-  color: white;
-  padding: 12px 12px;
+  color: var(--color-green);
+  padding: 8px 8px;
   border-radius: 50%;
   transition: .5s;
 }
@@ -539,11 +623,12 @@ footer {
 .sosmed .bx:hover {
   color: var(--color-green);
   background-color: white;
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
 
 .Copyright {
   display: flex;
+  font-family: var(--font-family2);
   justify-content: center;
   background-color: #589e54;
   color: whitesmoke;

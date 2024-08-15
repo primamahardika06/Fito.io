@@ -81,3 +81,19 @@ function limitInputLength(element, maxLength) {
         });
 
         // Loader End
+
+        // artikel start
+        function toggleSelengkapnya() {
+            var selengkapnyaDiv = document.querySelector('.selengkapnya');
+            var button = document.getElementById('read-more');
+        
+            if (selengkapnyaDiv.style.display === "none" || selengkapnyaDiv.style.display === "") {
+                selengkapnyaDiv.style.display = "grid"; 
+                button.innerText = "Tampilkan Lebih Sedikit"; 
+            } else {
+                selengkapnyaDiv.style.display = "none"; 
+                button.innerText = "Baca Selengkapnya"; 
+            }
+        }
+
+        // artikel end

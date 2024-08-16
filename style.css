@@ -25,7 +25,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 24px 32px;
+  padding: 24px 80px;
   width: 100%;
   z-index: 999;
   background-color: white;
@@ -85,7 +85,7 @@ nav a {
 
 .Navbar a:hover {
   color: var(--color-green);
-  border-bottom: 1px solid var(--color-green);
+  border-bottom: 1px solid black solid var(--color-green);
 }
 
 /* Nav End */
@@ -168,7 +168,6 @@ section.second_section .card {
   box-shadow: 2px 0px 12px 0px rgb(132, 131, 131);
   border-radius: 12px;
   padding-bottom: 35vh;
-  
 }
 
 section.second_section .card img {
@@ -249,7 +248,7 @@ section.artikel_section {
 .artikel .kiri_artikel img {
   width: 800px;
   height: 500px;
-  border-radius:12px;
+  border-radius: 12px;
 }
 
 .artikel .detail_artikel {
@@ -270,7 +269,7 @@ section.artikel_section {
 .artikel .kanan_artikel img {
   width: 150px;
   height: 100px;
-  border-radius:12px;
+  border-radius: 12px;
 }
 
 .artikel .kanan_artikel .detail_img a {
@@ -330,37 +329,37 @@ section.artikel_section {
   padding: 12px 16px;
 }
 
-.card_artikel{
+.card_artikel {
   background-color: whitesmoke;
   box-shadow: 2px 0px 12px 0px rgb(132, 131, 131);
   padding-bottom: 8px;
   width: 300px;
   border-radius: 12px;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.card_artikel:hover{
+.card_artikel:hover {
   transform: scale(0.9);
 }
 
-.card_artikel a{
- text-decoration: none;
+.card_artikel a {
+  text-decoration: none;
 }
 
-.card_artikel .detail_teks2{
+.card_artikel .detail_teks2 {
   color: black;
   display: flex;
   flex-direction: column;
-  gap:8px;
+  gap: 8px;
 }
 
-.card_artikel .detail_teks2 .detail_sumber2{
+.card_artikel .detail_teks2 .detail_sumber2 {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
 
-.detail_sumber2 .sumber{
+.detail_sumber2 .sumber {
   padding: 0px 8px;
   border-radius: 4px;
   background-color: var(--color-green);
@@ -371,7 +370,7 @@ section.artikel_section {
   color: grey;
 }
 
-.selengkapnya{
+.selengkapnya {
   display: grid;
   display: none;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -385,20 +384,20 @@ section.artikel_section {
   border-top-right-radius: 12px;
 }
 
-#read-more{
+#read-more {
   display: flex;
   align-self: center;
-  margin-top:20px ;
+  margin-top: 20px;
   padding: 12px 32px;
   border-radius: 8px;
   border: none;
   background-color: #589e54;
   color: white;
-  transition: .5s;
+  transition: 0.5s;
   cursor: pointer;
 }
 
-#read-more:hover{
+#read-more:hover {
   color: var(--color-green);
   background-color: #ffffff;
 }
@@ -410,11 +409,12 @@ section.artikel_section {
   display: flex;
   flex-direction: column;
   font-family: var(--font-family2);
-  padding: 12px 50px;
+  background-color: #8bc88893;
 }
 
 .bmi_main .bmi_title {
   margin-top: 100px;
+  padding: 12px 80px;
 }
 
 .bmi_main .bmi_gender {
@@ -423,48 +423,76 @@ section.artikel_section {
   justify-content: space-evenly;
   font-size: 20px;
   margin-top: 70px;
+  background-color: whitesmoke;
+  padding: 32px;
 }
 
 .bmi_gender .gender_pria {
   display: flex;
   flex-direction: column;
-  padding: 20px 100px;
-  border-radius: 10px;
-  border: 1px solid grey;
+  width: 292px;
+  height: 165px;
+  cursor: pointer;
 }
 
-.bmi_gender .gender_pria .title_pria {
-  display: flex;
-  margin-left: 24px;
-  margin-top: 5px;
+.gender_pria .img_pria {
+  height: 100%;
+}
+
+.gender_pria .img_pria p {
+  font-size: 20px;
+}
+
+.gender_pria button {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid black;
 }
 
 .bmi_gender .gender_pria img {
-  background-color: gray;
   border-radius: 50%;
-  height: 85px;
-  width: 85px;
+  height: 90px;
+  width: 90px;
 }
 
 .bmi_gender .gender_wanita {
   display: flex;
   flex-direction: column;
-  padding: 20px 100px;
-  border-radius: 10px;
-  border: 1px solid grey;
+  width: 292px;
+  height: 165px;
+  cursor: pointer;
 }
 
-.bmi_gender .gender_wanita .title_wanita {
-  display: flex;
-  margin-left: 12px;
-  margin-top: 5px;
+.gender_wanita .img_wanita {
+  height: 100%;
+}
+
+.gender_wanita .img_wanita p {
+  font-size: 20px;
+}
+
+.gender_wanita button {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid black;
 }
 
 .bmi_gender .gender_wanita img {
-  background-color: gray;
   border-radius: 50%;
-  height: 85px;
-  width: 85px;
+  height: 90px;
+  width: 90px;
+}
+
+.gender_pria button.active {
+  border: 1px solid rgb(0, 238, 255);
+  box-shadow: 2px 0px 12px 0px rgba(0, 225, 255, 0.3); /* Bayangan berwarna merah */
+}
+
+.gender_wanita button.active {
+  border: 1px solid var(--color-green);
+  box-shadow: 2px 0px 12px 0px rgba(0, 129, 24, 0.3); /* Bayangan berwarna merah */
 }
 
 .bmi_main .bmi_input {
@@ -474,7 +502,6 @@ section.artikel_section {
   margin-top: 150px;
   gap: 40px;
 }
-
 
 .bmi_main .bmi_input input {
   width: 600px;
@@ -497,14 +524,13 @@ section.artikel_section {
   border-radius: 12px;
   border: none;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .button_bmi button:hover {
   transform: scale(1.1);
   background-color: var(--color-green2);
   color: white;
-
 }
 
 .bmi_hasil {
@@ -568,7 +594,6 @@ input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-
 body.loaded .loader-container {
   display: none;
 }
@@ -582,7 +607,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid #589e54;
+  border-top: 1px solid black solid #589e54;
   padding-top: 20px;
   gap: 12px;
 }
@@ -601,23 +626,22 @@ footer {
   color: black;
 }
 
-
 .nav_footer a:hover {
   color: var(--color-green);
-  border-bottom: 1px solid var(--color-green);
+  border-bottom: 1px solid black solid var(--color-green);
 }
 
-.sosmed{
+.sosmed {
   display: flex;
   gap: 12px;
   font-size: 20px;
   cursor: pointer;
 }
-.sosmed .bx{
+.sosmed .bx {
   color: var(--color-green);
   padding: 8px 8px;
   border-radius: 50%;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .sosmed .bx:hover {
@@ -635,6 +659,5 @@ footer {
   width: 100%;
   padding: 12px;
 }
-
 
 /* Footer End */

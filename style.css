@@ -572,6 +572,146 @@ input[type="number"]::-webkit-outer-spin-button {
   border-top: 5px solid var(--color);
 }
 
+.bmi_main .info_bmi {
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+  justify-content: space-around;
+}
+
+.bmi_main .info_bmi .pola_makan {
+  display: flex;
+  flex-direction: row;
+  background-color: #f1f1f1;
+  width: 500px;
+  height: 130px;
+  border-radius: 10px;
+}
+
+.bmi_main .info_bmi .pola_makan p {
+  width: 350px;
+  margin: 15px;
+  font-size: 16px;
+}
+
+.bmi_main .info_bmi .pola_makan .image_makan {
+  padding-top: 15px;
+}
+
+.bmi_main .info_bmi .pola_makan .image_makan img {
+  width: 100%;
+  height: 90%;
+  border-radius: 5%;
+}
+
+.bmi_main .info_bmi .pola_makan button {
+  border-radius: 5%;
+  margin-left: 15px;
+  background-color: #a7e6ff;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.bmi_main .info_bmi .pola_makan button:hover {
+  border-radius: 5%;
+  background-color: white;
+  padding: 5px;
+  border-radius: 8px;
+  border: none;
+  transform: scale(1.1);
+}
+
+.bmi_main .info_bmi .penyakit_main {
+  width: 500px;
+  height: 130px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.bmi_main .penyakit_main h4 {
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.bmi_main .penyakit_main .list_penyakit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bmi_main .penyakit_main ul li {
+  margin: 10px;
+  margin-left: 30px;
+  font-size: 14px;
+}
+
+.bmi_main .penyakit_main ul li::marker {
+  color: #a7e6ff;
+}
+
+.program_obesitas .program_cardio,
+.program_atas {
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+}
+
+.program_obesitas h1 {
+  margin-top: 30px;
+  margin-left: 90px;
+}
+
+.program_obesitas h2 {
+  margin-top: 20px;
+  margin-left: 90px;
+}
+
+.program_atas h2 {
+  margin-top: 10000px;
+  margin-left: 90px;
+}
+
+.program_cardio,
+.program_atas {
+  margin-left: 90px;
+  margin-top: 10px;
+}
+
+.program1,
+.program2,
+.program3 {
+  width: 300px;
+  height: 370px;
+  background-color: #a7e6ff;
+  border-radius: 11px;
+  box-shadow: 2px 0px 12px 0px rgb(132, 131, 131);
+  margin-bottom: 50px;
+}
+
+.program1_nama h1,
+.program2_nama h1,
+.program3_nama h1 {
+  margin-top: 7px;
+  margin-left: 15px;
+}
+
+.program1_reps,
+.program2_reps,
+.program3_reps {
+  margin-top: 4px;
+  margin-left: 15px;
+}
+.program1 img,
+.program2 img,
+.program3 img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+
 /* bmi section end*/
 
 /* loader start */

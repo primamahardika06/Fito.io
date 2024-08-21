@@ -119,3 +119,17 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // icon di klik end
+
+// menampilkan program start
+
+document.getElementById('bmiInput').addEventListener('input', function() {
+  const programObesitasDiv = document.querySelector('.program_obesitas');
+  
+  if (bmi > 20) {
+      programObesitasDiv.style.display = 'block';
+  } else {
+      programObesitasDiv.style.display = 'none';
+  }
+});
+
+// menampilkan program end

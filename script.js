@@ -28,22 +28,51 @@ function calculateBMI() {
   // Menampilkan hasil
   document.getElementById("bmi").textContent = bmi.toFixed(2);
 
-  // Menentukan kategori BMI dan saran
+  // Reset semua elemen yang ingin disembunyikan atau ditampilkan
+  const elementsToHide = [
+    ".pola_makan_kurus",
+    ".penyakit_kurus",
+    ".pola_makan_ideal",
+    ".penyakit_ideal",
+    ".penyakit_obesitas",
+    ".program_obesitas",
+    ".program_kurus",
+    ".program_menjaga",
+  ];
+  elementsToHide.forEach(selector => {
+    document.querySelector(selector).style.display = "none";
+  });
+
+  // Menentukan kategori BMI dan saran serta menampilkan elemen yang sesuai
   let description = "";
   let suggestion = "";
+  
   if (bmi < 18.5) {
     description = "Kurus";
     suggestion = "Perbanyak Olahraga";
+    document.querySelector(".pola_makan_kurus").style.display = "flex";
+    document.querySelector(".penyakit_kurus").style.display = "block";
+    document.querySelector(".program_kurus").style.display = "flex";
   } else if (bmi < 24.9) {
     description = "Normal";
     suggestion = "Terus Pertahankan Pola Hidup Sehat";
+    document.querySelector(".pola_makan_ideal").style.display = "flex";
+    document.querySelector(".penyakit_ideal").style.display = "block";
+    document.querySelector(".program_menjaga").style.display = "flex";
   } else if (bmi < 29.9) {
     description = "Gemuk";
     suggestion = "Pertimbangkan Mengurangi Berat Badan";
+    document.querySelector(".pola_makan_kurus").style.display = "flex";
+    document.querySelector(".penyakit_obesitas").style.display = "block";
+    document.querySelector(".program_obesitas").style.display = "flex";
   } else {
     description = "Obesitas";
     suggestion = "Konsultasikan dengan Dokter";
+    document.querySelector(".pola_makan_kurus").style.display = "flex";
+    document.querySelector(".penyakit_obesitas").style.display = "block";
+    document.querySelector(".program_obesitas").style.display = "flex";
   }
+
   document.getElementById("desc").textContent = description;
   document.querySelector(".bmi_saran").textContent = suggestion;
 
@@ -122,14 +151,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // menampilkan program start
 
-document.getElementById('bmiInput').addEventListener('input', function() {
-  const programObesitasDiv = document.querySelector('.program_obesitas');
-  
-  if (bmi > 20) {
-      programObesitasDiv.style.display = 'block';
-  } else {
-      programObesitasDiv.style.display = 'none';
-  }
-});
+
 
 // menampilkan program end

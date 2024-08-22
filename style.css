@@ -698,17 +698,17 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 500px;
   height: 130px;
   border-radius: 10px;
-}
-
-.bmi_main .info_bmi .pola_makan_kurus {
   display: none;
 }
+
+
 
 .bmi_main .info_bmi .pola_makan_kurus p,
 .bmi_main .info_bmi .pola_makan_ideal p {
   width: 350px;
   margin: 15px;
   font-size: 16px;
+  
 }
 
 .bmi_main .info_bmi .pola_makan_kurus .image_makan,
@@ -718,6 +718,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .bmi_main .info_bmi .pola_makan_kurus .image_makan img,
 .bmi_main .info_bmi .pola_makan_ideal .image_makan img {
+  display: flex;
   width: 100%;
   height: 90%;
   border-radius: 5%;
@@ -752,6 +753,7 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 130px;
   background-color: #f1f1f1;
   border-radius: 10px;
+  display: none;
 }
 
 .penyakit_kurus,
@@ -788,6 +790,14 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 /* program latihan start */
+
+.program_obesitas,
+.program_kurus,
+.program_menjaga{
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
 
 .program_cardio,
 .program_atas,

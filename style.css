@@ -56,6 +56,9 @@ nav .title a {
 
 nav a {
   text-decoration: none;
+  display: flex;
+  gap: 4px;
+  flex-direction: row;
   color: black;
   font-size: 16px;
   transition: 0.5s;
@@ -68,7 +71,16 @@ nav a {
   cursor: pointer;
 }
 
+.Navbar .bx{
+  display: flex;
+  align-items: center;
+  
+}
+
 .Navbar button {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
   padding: 8px 48px;
   border-radius: 4px;
   border: none;
@@ -89,6 +101,7 @@ nav a {
 }
 
 /* Nav End */
+
 
 /* Hero section start */
 section.hero_section {
@@ -136,6 +149,66 @@ section.hero_section .teks button:hover {
 
 /* Hero section end */
 
+
+/* About start */
+section.about_section{
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family2);
+  margin: 48px 64px;
+}
+
+.detail_about{
+ display: flex;
+ flex-direction: row;
+}
+
+.title_about{
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.detail_about img{
+  border-radius:12px ;
+  width: 600px;
+  height: 400px;
+}
+
+.teks_about{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 32px;
+  gap: 20px;
+}
+
+.teks_about h1{
+ font-size:28px ;
+}
+.teks_about p{
+ font-size:20px ;
+}
+
+.teks_about button{
+  padding: 12px 16px;
+  width: 30%;
+  border: none;
+  background-color: #8bc888;
+  color: white;
+  border-radius:8px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.teks_about button:hover{
+  color: var(--color-green2);
+  background-color: white;
+}
+
+/* About end */
+
+
 /* Second Section Start */
 section.second_section {
   display: flex;
@@ -143,13 +216,15 @@ section.second_section {
   justify-content: center;
   align-items: center;
   font-family: var(--font-family2);
-  margin-top: 48px;
+  padding: 32px 0;
+  margin-top: 20vh;
+  background-color: #8bc888;
 }
 
 section.second_section .title2 h1 {
   display: flex;
   text-align: center;
-  text-shadow: 8px 8px 6px rgba(0, 0, 0, 0.559);
+  color: white;
 }
 
 section.second_section .card_manfaat {
@@ -242,19 +317,55 @@ section.artikel_section {
 }
 
 .artikel .kiri_artikel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   cursor: pointer;
-}
-
-.artikel .kiri_artikel img {
-  width: 800px;
+  background-image: url(assets/cara-menurunkan-berat-badan-secara-realistis-0-alodokter.jpg);
+  background-size: cover;
+  width: 220vh;
   height: 500px;
   border-radius: 12px;
+  transition: .5s;
 }
+
+
+.kiri_artikel a{
+  text-decoration: none;
+}
+
+.kiri_teks{
+  background-color: #ffffff43;
+  backdrop-filter: blur(10px);
+  color: black;
+  padding: 16px 20px;
+  display: none;
+  transition: 5s;
+}
+
+.kiri_artikel:hover .kiri_teks{
+  display: block;
+}
+
+.kiri_sumber{
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.kiri_sumber .sumber {
+  padding: 0px 8px;
+  border-radius: 4px;
+  width: auto;
+  background-color: var(--color-green);
+  color: white;
+}
+
 
 .artikel .detail_artikel {
   display: flex;
   flex-direction: row;
-  gap: 32px;
+  gap: 30px;
 }
 
 .artikel .kanan_artikel {
@@ -290,7 +401,7 @@ section.artikel_section {
 .detail_sumber {
   display: flex;
   flex-direction: row;
-  gap: 32px;
+  gap: 28px;
 }
 
 .detail_teks .sumber {
@@ -607,7 +718,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid black solid #589e54;
+  border-top: 1px solid #589e54;
   padding-top: 20px;
   gap: 12px;
 }

@@ -579,7 +579,8 @@ input[type="number"]::-webkit-outer-spin-button {
   justify-content: space-around;
 }
 
-.bmi_main .info_bmi .pola_makan {
+.bmi_main .info_bmi .pola_makan_kurus,
+.bmi_main .info_bmi .pola_makan_ideal {
   display: flex;
   flex-direction: row;
   background-color: #f1f1f1;
@@ -588,23 +589,31 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 10px;
 }
 
-.bmi_main .info_bmi .pola_makan p {
+.bmi_main .info_bmi .pola_makan_kurus {
+  display: none;
+}
+
+.bmi_main .info_bmi .pola_makan_kurus p,
+.bmi_main .info_bmi .pola_makan_ideal p {
   width: 350px;
   margin: 15px;
   font-size: 16px;
 }
 
-.bmi_main .info_bmi .pola_makan .image_makan {
+.bmi_main .info_bmi .pola_makan_kurus .image_makan,
+.bmi_main .info_bmi .pola_makan_ideal .image_makan {
   padding-top: 15px;
 }
 
-.bmi_main .info_bmi .pola_makan .image_makan img {
+.bmi_main .info_bmi .pola_makan_kurus .image_makan img,
+.bmi_main .info_bmi .pola_makan_ideal .image_makan img {
   width: 100%;
   height: 90%;
   border-radius: 5%;
 }
 
-.bmi_main .info_bmi .pola_makan button {
+.bmi_main .info_bmi .pola_makan_kurus button,
+.bmi_main .info_bmi .pola_makan_ideal button {
   border-radius: 5%;
   margin-left: 15px;
   background-color: #a7e6ff;
@@ -615,7 +624,8 @@ input[type="number"]::-webkit-outer-spin-button {
   cursor: pointer;
 }
 
-.bmi_main .info_bmi .pola_makan button:hover {
+.bmi_main .info_bmi .pola_makan_kurus button:hover,
+.bmi_main .info_bmi .pola_makan_ideal button:hover {
   border-radius: 5%;
   background-color: white;
   padding: 5px;
@@ -624,54 +634,93 @@ input[type="number"]::-webkit-outer-spin-button {
   transform: scale(1.1);
 }
 
-.bmi_main .info_bmi .penyakit_main {
+.penyakit_obesitas,
+.penyakit_kurus,
+.penyakit_ideal {
   width: 500px;
   height: 130px;
   background-color: #f1f1f1;
   border-radius: 10px;
 }
 
-.bmi_main .penyakit_main h4 {
+.penyakit_kurus,
+.penyakit_obesitas,
+.penyakit_kurus,
+.penyakit_kurus {
+  display: none;
+}
+
+.penyakit_obesitas h4,
+.penyakit_kurus h4,
+.penyakit_ideal h4 {
   margin-left: 15px;
   margin-top: 15px;
 }
 
-.bmi_main .penyakit_main .list_penyakit {
+.penyakit_obesitas .list_penyakit,
+.penyakit_kurus .list_penyakit {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.bmi_main .penyakit_main ul li {
+.penyakit_obesitas ul li,
+.penyakit_kurus ul li {
   margin: 10px;
   margin-left: 30px;
   font-size: 14px;
 }
 
-.bmi_main .penyakit_main ul li::marker {
+.penyakit_obesitas ul li::marker,
+.penyakit_kurus ul li::marker {
   color: #a7e6ff;
 }
 
+/* program latihan start */
 
 .program_cardio,
-.program_atas, .program_core, .program_fleksibel {
+.program_atas,
+.program_core,
+.program_fleksibel,
+.program_angkat_beban,
+.program_hiit,
+.program_fungsional,
+.program_core,
+.program_kekuatan,
+.program_kardio,
+.program_yoga,
+.program_fungsional2 {
   display: flex;
   flex-direction: row;
   gap: 70px;
 }
 
-.program_obesitas h1 {
+.program_obesitas h1,
+.program_kurus h1,
+.program_menjaga h1 {
   margin-top: 30px;
   margin-left: 90px;
 }
 
-.program_obesitas h2 {
+.program_obesitas h2,
+.program_kurus h2,
+.program_menjaga h2 {
   margin-top: 20px;
   margin-left: 90px;
 }
 
 .program_cardio,
-.program_atas, .program_core, .program_fleksibel {
+.program_atas,
+.program_core,
+.program_fleksibel,
+.program_angkat_beban,
+.program_hiit,
+.program_fungsional,
+.program_core,
+.program_kekuatan,
+.program_kardio,
+.program_yoga,
+.program_fungsional2 {
   margin-left: 90px;
   margin-top: 10px;
 }
@@ -697,16 +746,16 @@ input[type="number"]::-webkit-outer-spin-button {
 .program1_reps,
 .program2_reps,
 .program3_reps {
-  margin-top: 4px;
-  margin-left: 15px;
+  margin: 4px 15px;
 }
 .program1 img,
 .program2 img,
 .program3 img {
   width: 300px;
-  height: 300px;
+  height: 280px;
   border-radius: 10px;
 }
+/* program latihan end */
 
 /* bmi section end*/
 

@@ -1,4 +1,6 @@
 // BMI Start
+
+// Fungsi untuk membatasi panjang input
 function limitInputLength(element, maxLength) {
   element.addEventListener("input", function () {
     // Hanya membatasi angka jika lebih dari maxLength
@@ -10,6 +12,7 @@ function limitInputLength(element, maxLength) {
   });
 }
 
+// Fungsi untuk menghitung BMI
 function calculateBMI() {
   // Mendapatkan nilai input dari form
   const weight = parseFloat(document.getElementById("weightInput").value);
@@ -79,6 +82,13 @@ function calculateBMI() {
   // Menampilkan elemen hasil
   document.querySelector(".bmi_hasil").classList.remove("hidden");
 
+  // Mengubah tombol menjadi tombol reset
+  const button = document.querySelector(".button_bmi button");
+  button.textContent = "Cek Ulang";
+  button.onclick = function() {
+    resetForm();
+  };
+
   // Membatasi input hanya 3 digit
   const heightInput = document.getElementById("heightInput");
   const weightInput = document.getElementById("weightInput");
@@ -86,6 +96,42 @@ function calculateBMI() {
   limitInputLength(heightInput, 3);
   limitInputLength(weightInput, 3);
 }
+
+// Fungsi untuk mereset form
+function resetForm() {
+  // Reset form: Mengosongkan inputan
+  document.getElementById("bmiForm").reset();
+
+  // Mengembalikan tombol menjadi "Cek Sekarang"
+  const button = document.querySelector(".button_bmi button");
+  button.textContent = "Cek Sekarang";
+  button.onclick = function() {
+    calculateBMI();
+  };
+
+  // Menyembunyikan hasil BMI dan semua elemen terkait
+  document.querySelector(".bmi_hasil").classList.add("hidden");
+
+  const elementsToHide = [
+    ".pola_makan_kurus",
+    ".penyakit_kurus",
+    ".pola_makan_ideal",
+    ".penyakit_ideal",
+    ".penyakit_obesitas",
+    ".program_obesitas",
+    ".program_kurus",
+    ".program_menjaga",
+  ];
+  elementsToHide.forEach(selector => {
+    document.querySelector(selector).style.display = "none";
+  });
+
+  // Mengosongkan inputan dan menyembunyikan hasil BMI
+  document.getElementById("bmi").textContent = "";
+  document.getElementById("desc").textContent = "";
+  document.querySelector(".bmi_saran").textContent = "";
+}
+
 
 // BMI End
 

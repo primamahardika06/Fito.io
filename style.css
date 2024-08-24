@@ -20,6 +20,11 @@ body {
   --obesitas: red;
 }
 
+@font-face {
+  font-family: myFont;
+  src: url(Acid\ Bold.ttf);
+}
+
 /* Nav start */
 nav {
   display: flex;
@@ -29,7 +34,6 @@ nav {
   width: 100%;
   z-index: 999;
   background-color: white;
-  font-family: var(--font-family2);
   position: fixed;
 }
 
@@ -40,10 +44,11 @@ nav .title {
   flex-direction: row;
   font-size: 20px;
   cursor: pointer;
+  font-family: myFont;
 }
 
 nav .title img {
-  width: 40px;
+  width: 50px;
   height: 40px;
 }
 
@@ -51,7 +56,9 @@ nav .title a {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-green);
+  color: rgb(40, 39, 39);
+  font-size: 20px;
+  /* color: black; */
 }
 
 nav a {
@@ -69,12 +76,13 @@ nav a {
   gap: 16px;
   align-items: center;
   cursor: pointer;
+  font-family: var(--font-family2);
 }
 
-.Navbar .bx{
+.Navbar .bx {
   display: flex;
   align-items: center;
-  
+
 }
 
 .Navbar button {
@@ -151,31 +159,31 @@ section.hero_section .teks button:hover {
 
 
 /* About start */
-section.about_section{
+section.about_section {
   display: flex;
   flex-direction: column;
   font-family: var(--font-family2);
   margin: 48px 64px;
 }
 
-.detail_about{
- display: flex;
- flex-direction: row;
+.detail_about {
+  display: flex;
+  flex-direction: row;
 }
 
-.title_about{
+.title_about {
   display: flex;
   justify-content: center;
   font-size: 32px;
 }
 
-.detail_about img{
-  border-radius:12px ;
+.detail_about img {
+  border-radius: 12px;
   width: 600px;
   height: 400px;
 }
 
-.teks_about{
+.teks_about {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -183,25 +191,26 @@ section.about_section{
   gap: 20px;
 }
 
-.teks_about h1{
- font-size:28px ;
-}
-.teks_about p{
- font-size:20px ;
+.teks_about h1 {
+  font-size: 28px;
 }
 
-.teks_about button{
+.teks_about p {
+  font-size: 20px;
+}
+
+.teks_about button {
   padding: 12px 16px;
   width: 30%;
   border: none;
   background-color: #8bc888;
   color: white;
-  border-radius:8px;
+  border-radius: 8px;
   cursor: pointer;
   transition: .5s;
 }
 
-.teks_about button:hover{
+.teks_about button:hover {
   color: var(--color-green2);
   background-color: white;
 }
@@ -250,8 +259,8 @@ section.second_section .card img {
   border-top-right-radius: 12px;
   border-bottom: 2px solid #589e54;
   background-size: cover;
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
 }
 
 section.second_section .card p {
@@ -269,35 +278,35 @@ section.second_section .card ::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   background: #589e54;
-  left: 38%;
+  left: 40%;
 }
 
 section.second_section .card1 ::before {
   content: "1";
   color: white;
-  bottom: 27vh;
+  bottom: 28vh;
 }
 
 section.second_section .card2 ::before {
   content: "2";
   color: white;
-  bottom: 24vh;
+  bottom: 25vh;
 }
 
 section.second_section .card3 ::before {
   content: "3";
   color: white;
-  bottom: 25vh;
+  bottom: 26vh;
 }
 
 section.second_section .card4 ::before {
   content: "4";
   color: white;
-  bottom: 20vh;
+  bottom: 22vh;
 }
 
 /* Second Section End */
@@ -330,11 +339,11 @@ section.artikel_section {
 }
 
 
-.kiri_artikel a{
+.kiri_artikel a {
   text-decoration: none;
 }
 
-.kiri_teks{
+.kiri_teks {
   background-color: #ffffff43;
   backdrop-filter: blur(10px);
   color: black;
@@ -343,11 +352,11 @@ section.artikel_section {
   transition: 5s;
 }
 
-.kiri_artikel:hover .kiri_teks{
+.kiri_artikel:hover .kiri_teks {
   display: block;
 }
 
-.kiri_sumber{
+.kiri_sumber {
   display: flex;
   flex-direction: row;
   gap: 32px;
@@ -598,12 +607,14 @@ section.artikel_section {
 
 .gender_pria button.active {
   border: 1px solid rgb(0, 238, 255);
-  box-shadow: 2px 0px 12px 0px rgba(0, 225, 255, 0.3); /* Bayangan berwarna merah */
+  box-shadow: 2px 0px 12px 0px rgba(0, 225, 255, 0.3);
+  /* Bayangan berwarna merah */
 }
 
 .gender_wanita button.active {
   border: 1px solid var(--color-green);
-  box-shadow: 2px 0px 12px 0px rgba(0, 129, 24, 0.3); /* Bayangan berwarna merah */
+  box-shadow: 2px 0px 12px 0px rgba(0, 129, 24, 0.3);
+  /* Bayangan berwarna merah */
 }
 
 .bmi_main .bmi_input {
@@ -615,9 +626,21 @@ section.artikel_section {
 }
 
 .bmi_main .bmi_input input {
+  padding: 0 12px;
   width: 600px;
   height: 35px;
+  border: none;
+  outline: none;
 }
+
+.bmi_main .bmi_input #heightInput:hover {
+  outline: 2px solid #8bc888;
+}
+
+.bmi_main .bmi_input #weightInput:hover {
+  outline: 2px solid #a7e6ff;
+}
+
 
 .bmi_main .bmi_input p {
   margin-bottom: 10px;
@@ -708,7 +731,7 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 350px;
   margin: 15px;
   font-size: 16px;
-  
+
 }
 
 .bmi_main .info_bmi .pola_makan_kurus .image_makan,
@@ -791,9 +814,13 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /* program latihan start */
 
+.program_latihan {
+  font-family: var(--font-family2);
+}
+
 .program_obesitas,
 .program_kurus,
-.program_menjaga{
+.program_menjaga {
   display: flex;
   flex-direction: column;
   display: none;
@@ -869,6 +896,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .program3_reps {
   margin: 4px 15px;
 }
+
 .program1 img,
 .program2 img,
 .program3 img {
@@ -876,6 +904,7 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 280px;
   border-radius: 10px;
 }
+
 /* program latihan end */
 
 /* bmi section end*/
@@ -943,6 +972,7 @@ footer {
   font-size: 20px;
   cursor: pointer;
 }
+
 .sosmed .bx {
   color: var(--color-green);
   padding: 8px 8px;

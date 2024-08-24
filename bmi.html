@@ -17,20 +17,35 @@
     <div class="title">
       <a href="index.html">
         <img src="assets/logo_fito.png" alt="" />
-        <h1>FiTo</h1>
+        <h1>FITO</h1>
       </a>
     </div>
 
     <div class="Navbar">
       <a href="index.html"><i class="bx bx-home"> </i>Home</a>
       <a href="index.html#manfaat"><i class="bx bx-bulb"> </i>Solutions</a>
-      <a href=""><i class="bx bx-conversation"> </i>Community</a>
+      <a href="index.html#about"><i class="bx bx-conversation"> </i>About</a>
       <a href="index.html#artikel"><i class="bx bx-news"> </i>Article</a>
       <a href="index.html#footer"><i class="bx bx-phone"> </i>Contact</a>
       <a href="bmi.html">
         <button>MULAI <i class="bx bx-rocket"></i></button>
       </a>
     </div>
+
+    <div class="nav_hamburger">
+      <a href="#"><i class='bx bx-home'> </i>Home</a>
+      <a href="#manfaat"><i class='bx bx-bulb'> </i>Solutions</a>
+      <a href="#about"><i class='bx bx-conversation'> </i>About</a>
+      <a href="#artikel"><i class='bx bx-news'> </i>Article</a>
+      <a href="#footer"><i class='bx bx-phone'> </i>Contact</a>
+      <a href="bmi.html">
+          <button>MULAI <i class='bx bx-rocket'></i></button>
+      </a>
+  </div>
+
+  <div class="hamburger">
+      <i class='bx bx-menu'></i>
+  </div>
   </nav>
   <!-- Nav End -->
 
@@ -47,7 +62,7 @@
         <div class="img_pria">
           <button>
             <img src="assets/man.png" alt="Pria" />
-            <p>Pria</p>
+            <p>Pria<i class='bx bx-male-sign'></i></p>
           </button>
         </div>
       </div>
@@ -55,26 +70,31 @@
         <div class="img_wanita">
           <button>
             <img src="assets/women.png" alt="" />
-            <p>Wanita</p>
+            <p>Wanita<i class='bx bx-female-sign'></i></p>
           </button>
         </div>
       </div>
     </div>
 
     <form class="bmi_input" id="bmiForm">
-      <div class="bmi_tinggi" id="height">
-        <p>Tinggi Badan :</p>
-        <input id="heightInput" type="number" placeholder="Berapa Tinggi Kamu (cm)" />
+      <div class="img_bmi">
+        <img src="assets/bg-bmi.jpg" alt="">
       </div>
-      <div class="bmi_berat" id="weightt">
-        <p>Berat Badan :</p>
-        <input id="weightInput" type="number" placeholder="Berapa Berat Kamu (kg)" />
-      </div>
-
-      <div class="button_bmi">
-        <a href="#bmiHasil">
-          <button type="button" onclick="calculateBMI()">Cek Sekarang</button>
-        </a>
+      <div class="input">
+        <div class="bmi_tinggi" id="height">
+          <p>Tinggi Badan :</p>
+          <input id="heightInput" type="number" placeholder="Berapa Tinggi Kamu (cm)" />
+        </div>
+        <div class="bmi_berat" id="weightt">
+          <p>Berat Badan :</p>
+          <input id="weightInput" type="number" placeholder="Berapa Berat Kamu (kg)" />
+        </div>
+  
+        <div class="button_bmi">
+          <a href="#bmiHasil">
+            <button type="button" onclick="calculateBMI()">Cek Sekarang</button>
+          </a>
+        </div>
       </div>
     </form>
 

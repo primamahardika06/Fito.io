@@ -195,8 +195,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // icon di klik end
 
-// menampilkan program start
 
+// Hamburger Start
 
+document.addEventListener("DOMContentLoaded", function() {
+  const hamburger = document.querySelector(".hamburger");
+  const navHamburger = document.querySelector(".nav_hamburger");
 
-// menampilkan program end
+  hamburger.addEventListener("click", function(event) {
+      event.stopPropagation();
+
+      if (navHamburger.style.right === "0px") {
+          navHamburger.style.right = "-100%";
+      } else {
+          navHamburger.style.right = "0";
+      }
+
+      hamburger.classList.toggle("active");
+  });
+
+  document.addEventListener("click", function(event) {
+      if (!navHamburger.contains(event.target) && !hamburger.contains(event.target)) {
+          navHamburger.style.right = "-100%";
+          hamburger.classList.remove("active");
+      } else if (navHamburger.contains(event.target) && event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') {
+          navHamburger.style.right = "-100%";
+          hamburger.classList.remove("active");
+      }
+  });
+
+  window.addEventListener("resize", function() {
+      if (window.innerWidth > 768) {
+          navHamburger.style.right = "-100%";
+          hamburger.classList.remove("active");
+      }
+  });
+});
+
+// Hamburger End
+

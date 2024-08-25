@@ -177,21 +177,6 @@ nav a {
   font-size: 24px;
 }
 
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-
-  .Navbar {
-    display: none;
-  }
-
-  .nav_hamburger a {
-    padding: 15px;
-    text-align: center;
-  }
-}
 
 /* Hamburger End */
 
@@ -1317,6 +1302,20 @@ section.second_section .mobile_card {
 }
 
 @media screen and (max-width:770px) {
+  
+    .hamburger {
+      display: flex;
+    }
+  
+  
+    .Navbar {
+      display: none;
+    }
+  
+    .nav_hamburger a {
+      padding: 15px;
+      text-align: center;
+    }
 
   section.hero_section .teks h1 {
     font-size: 60px;

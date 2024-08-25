@@ -7,6 +7,7 @@
 
 body {
   overflow-x: hidden;
+  width: 100%;
 }
 
 :root {
@@ -1302,7 +1303,7 @@ section.second_section .mobile_card {
 }
 
 @media screen and (max-width:770px) {
-  
+
     .hamburger {
       display: flex;
     }

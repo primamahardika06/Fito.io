@@ -113,19 +113,19 @@ nav a {
 /* Nav End */
 
 /* Hamburger Start */
-.nav_hamburger {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 100%;
-  background-color: #fff;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 20px;
-  transition: right 0.5s ease;
-  z-index: 9999;
+.nav_hamburger{
+ position : fixed;
+ top : 0;
+ right : -100%; 
+ width : 100%;
+ background-color : #fff;
+ box-shadow:-2px 0 5px rgba(0, 0, 0, 0.5);
+ display : flex;
+ flex-direction : column;
+ gap : 10px;
+ padding : 20px;
+ transition : right 0.5s ease;
+ z-index: 9999;
 }
 
 .nav_hamburger a {
@@ -414,7 +414,7 @@ section.second_section .card4 ::before {
   color: black;
   padding: 8px 12px;
   border-radius: 12px;
-  z-index: 999;
+  z-index: 9999;
   cursor: pointer;
   gap: 12px;
   transition: .5s;
@@ -1146,11 +1146,6 @@ footer {
 
 /* Footer End */
 
-/* Mobile Card */
-section.second_section .mobile_card {
-  display: none;
-}
-
 
 
 /* Media Responsive Start */
@@ -1161,39 +1156,39 @@ section.second_section .mobile_card {
     gap: 4px;
   }
 
-  .detail_konsultasi h3 {
+  .detail_konsultasi h3{
     font-size: 12px;
   }
 
   section.about_section {
     margin: 30px 48px;
   }
-
+  
   .detail_about img {
     width: 500px;
     height: 300px;
   }
-
+  
   .teks_about {
     padding: 0 32px;
     gap: 20px;
   }
-
+  
   .teks_about h1 {
     font-size: 20px;
   }
-
+  
   .teks_about p {
     font-size: 16px;
   }
-
+  
   .teks_about button {
     padding: 8px 12px;
     width: 30%;
   }
 
   section.second_section .title2 h1 {
-    font-size: 20px;
+   font-size: 20px;
   }
 
   section.second_section .card img {
@@ -1215,17 +1210,17 @@ section.second_section .mobile_card {
     content: "1";
     bottom: 26vh;
   }
-
+  
   section.second_section .card2 ::before {
     content: "2";
     bottom: 25vh;
   }
-
+  
   section.second_section .card3 ::before {
     content: "3";
     bottom: 25vh;
   }
-
+  
   section.second_section .card4 ::before {
     content: "4";
     bottom: 22vh;
@@ -1233,17 +1228,20 @@ section.second_section .mobile_card {
 
 }
 
-@media screen and (max-width:996px) {
+@media screen and (max-width:996px){
 
   .detail_konsultasi {
     margin-left: 35vh;
   }
 
+ 
+
+
   section.second_section .card_manfaat {
-    display: none;
+   display: none;
   }
 
-  section.second_section .mobile_card {
+  section.second_section .mobile_card{
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -1251,46 +1249,44 @@ section.second_section .mobile_card {
     margin-top: 32px;
   }
 
-  .mobile_card .mobile_card1 img {
+  .mobile_card .mobile_card1 img{
     width: 280px;
     height: 280px;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
+    border-top-left-radius:12px ;
+    border-bottom-left-radius:12px ;
   }
-
-  .mobile_card .mobile_card1 p {
+  .mobile_card .mobile_card1 p{
     background-color: #ffffff;
     display: flex;
     text-align: center;
     align-items: center;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
+    border-top-right-radius:12px ;
+    border-bottom-right-radius:12px ;
   }
-
-  .mobile_card .mobile_card1 {
+  .mobile_card .mobile_card1{
     display: flex;
     flex-direction: row;
   }
 
 }
 
-@media screen and (max-width:928px) {
+@media screen and (max-width:928px){
   .detail_konsultasi {
     margin-left: 26vh;
+    padding: 4px 8px;
   }
 
-  .detail_konsultasi h3 {
+  .detail_konsultasi h3{
     font-size: 10px;
   }
 
   section.about_section {
     margin: 28px 30px;
   }
-
   .teks_about h1 {
     font-size: 18px;
   }
-
+  
   .teks_about p {
     font-size: 14px;
   }
@@ -1306,38 +1302,21 @@ section.second_section .mobile_card {
     gap: 20px;
   }
 
-  .mobile_card .mobile_card1 img {
+  .mobile_card .mobile_card1 img{
     width: 240px;
     height: 240px;
   }
 
-  .mobile_card .mobile_card1 p {
-    font-size: 14px;
+  .mobile_card .mobile_card1 p{
+  font-size: 14px;
   }
 }
 
-@media screen and (max-width:770px) {
-
-  section.hero_section .teks h1 {
-    font-size: 60px;
-  }
-
-  section.hero_section .teks p {
-    font-size: 16px;
-  }
-
-  section.hero_section .teks button {
-    padding: 8px 32px;
-    font-size: 14px;
-  }
-
-  .detail_konsultasi {
-    margin-left: 20vh;
-  }
+@media screen and (max-width:770px){
 
   section.second_section .title2 h1 {
     font-size: 16px;
-  }
+   }
 
   .teks_about p {
     font-size: 14px;
@@ -1352,18 +1331,13 @@ section.second_section .mobile_card {
     height: 250px;
   }
 
-  .mobile_card .mobile_card1 img {
+  .mobile_card .mobile_card1 img{
     width: 220px;
     height: 220px;
   }
 }
 
-@media screen and (max-width:728px) {
-
-  .detail_konsultasi {
-    margin-left: 16vh;
-  }
-
+@media screen and (max-width:728px){
   .detail_about img {
     width: 420px;
     height: 220px;
@@ -1375,114 +1349,10 @@ section.second_section .mobile_card {
     width: 40%;
   }
 
-  .teks_about p {
-    font-size: 12px;
-  }
-
-}
-
-@media screen and (max-width:676px) {
-
-  .detail_konsultasi {
-    margin-left: 14vh;
-  }
-
-  section.about_section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 32px;
-    
-  }
-
-  .detail_about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:16px;
-  }
-
-
-  .teks_about {
-    display: flex;
-    text-align: center;
-    align-items: center;
   
-  }
-
-  .detail_about img {
-    width: 450px;
-    height: 250px;
-  }
-
-  .teks_about h1 {
-    font-size: 20px;
-  }
-  .teks_about p {
-    font-size: 16px;
-  }
-
 }
-
-@media screen and (max-width:612px){
-  .detail_konsultasi {
-    margin-left: 10vh;
-  }
-
-  .mobile_card .mobile_card1 img {
-    width: 200px;
-    height: 200px;
-  }
-
-  .mobile_card .mobile_card1 p {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width:548px){
-  .detail_konsultasi {
-    margin-left: 6vh;
-  }
-}
-
-@media screen and (max-width:482px){
-  .detail_konsultasi {
-    margin-left: 6vh;
-  }
-
-  .detail_konsultasi h3 {
-    font-size: 10px;
-  }
-
-  .detail_konsultasi img {
-    width: 30px;
-    height: 30px;
-  }
-
-  .detail_about img {
-    width: 400px;
-    height: 220px;
-  }
-
-  .teks_about h1 {
-    font-size: 18px;
-  }
-  .teks_about p {
-    font-size: 14px;
-  }
-
-  .mobile_card .mobile_card1 img {
-    width: 180px;
-    height: 180px;
-  }
-
-}
-
-
-
-
 
 
 
 /* Media Responsive End */
+

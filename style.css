@@ -6,7 +6,7 @@
 }
 
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 :root {
@@ -142,7 +142,6 @@ nav a {
 
 .nav_hamburger a:hover {
   color: var(--color-green);
-  border-bottom: 1px solid black solid var(--color-green);
 }
 
 .nav_hamburger button {

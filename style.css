@@ -41,7 +41,6 @@ nav .title {
   font-size: 20px;
   cursor: pointer;
   font-family: myFont;
-
 }
 
 nav .title img {
@@ -79,7 +78,6 @@ nav a {
 .Navbar .bx {
   display: flex;
   align-items: center;
-
 }
 
 .Navbar button {
@@ -104,7 +102,6 @@ nav a {
   color: var(--color-green);
   border-bottom: 1px solid black solid var(--color-green);
 }
-
 
 /* Nav End */
 
@@ -171,10 +168,7 @@ nav a {
   font-size: 24px;
 }
 
-
 /* Hamburger End */
-
-
 
 /* Hero section start */
 section.hero_section {
@@ -221,7 +215,6 @@ section.hero_section .teks button:hover {
 }
 
 /* Hero section end */
-
 
 /* About start */
 section.about_section {
@@ -272,7 +265,7 @@ section.about_section {
   color: white;
   border-radius: 8px;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .teks_about button:hover {
@@ -281,7 +274,6 @@ section.about_section {
 }
 
 /* About end */
-
 
 /* Second Section Start */
 section.second_section {
@@ -396,7 +388,7 @@ section.second_section .card4 ::before {
   z-index: 999;
   cursor: pointer;
   gap: 12px;
-  transition: .5s;
+  transition: 0.5s;
   box-shadow: 2px 0px 12px 0px black;
 }
 
@@ -413,7 +405,6 @@ section.second_section .card4 ::before {
 .detail_konsultasi h3 {
   font-size: 16px;
 }
-
 
 /* Section Konsultasi End */
 
@@ -441,9 +432,8 @@ section.artikel_section {
   width: 220vh;
   height: 500px;
   border-radius: 12px;
-  transition: .5s;
+  transition: 0.5s;
 }
-
 
 .kiri_artikel a {
   text-decoration: none;
@@ -475,7 +465,6 @@ section.artikel_section {
   background-color: var(--color-green);
   color: white;
 }
-
 
 .artikel .detail_artikel {
   display: flex;
@@ -651,7 +640,6 @@ section.artikel_section {
   margin-top: 70px;
   background-color: whitesmoke;
   padding: 32px;
-
 }
 
 .bmi_gender .gender_pria {
@@ -672,7 +660,6 @@ section.artikel_section {
   gap: 8px;
 }
 
-
 .gender_pria button {
   width: 100%;
   height: 100%;
@@ -686,7 +673,6 @@ section.artikel_section {
   height: 90px;
   width: 90px;
 }
-
 
 .bmi_gender .gender_wanita {
   display: flex;
@@ -768,7 +754,6 @@ section.artikel_section {
   outline: 2px solid #a7e6ff;
 }
 
-
 .bmi_main .bmi_input p {
   margin-bottom: 10px;
   font-size: 18px;
@@ -833,6 +818,35 @@ input[type="number"]::-webkit-outer-spin-button {
   border-top: 5px solid var(--color);
 }
 
+.image_hasil {
+  display: flex;
+  flex-direction: row;
+}
+
+.image_hasil {
+  width: 510px;
+  justify-content: space-between;
+}
+
+.image_hasil .kurus_hasil, .image_hasil .normal_hasil, .image_hasil .gemuk_hasil {
+  width: 80px;
+}
+
+.image_hasil .obesitas_hasil {
+  width: 120px;
+}
+
+.image_hasil .kurus_hasil img, .image_hasil .normal_hasil img, .image_hasil .gemuk_hasil img {
+  width: 100%;
+  height: 120px;
+}
+
+.image_hasil .obesitas_hasil img {
+  width: 100%;
+  height: 120px;
+}
+
+
 .bmi_main .info_bmi {
   display: flex;
   flex-direction: row;
@@ -851,14 +865,11 @@ input[type="number"]::-webkit-outer-spin-button {
   display: none;
 }
 
-
-
 .bmi_main .info_bmi .pola_makan_kurus p,
 .bmi_main .info_bmi .pola_makan_ideal p {
   width: 350px;
   margin: 15px;
   font-size: 16px;
-
 }
 
 .bmi_main .info_bmi .pola_makan_kurus .image_makan,
@@ -1130,10 +1141,8 @@ section.second_section .mobile_card {
   display: none;
 }
 
-
-
 /* Media Responsive Start */
-@media screen and (max-width:1029px) {
+@media screen and (max-width: 1029px) {
   .detail_konsultasi {
     margin-left: 38vh;
     padding: 4px 8px;
@@ -1219,17 +1228,16 @@ section.second_section .mobile_card {
     height: 55vh;
   }
 
-
   .artikel .kanan_artikel img {
     width: 100px;
     height: 80px;
   }
-  
+
   .detail_teks .sumber {
     padding: 2px 8px;
     font-size: 12px;
   }
-  
+
   .detail_teks .tanggal {
     font-size: 14px;
   }
@@ -1248,27 +1256,25 @@ section.second_section .mobile_card {
     height: 150px;
   }
 
-  .detail_teks2 h3{
+  .detail_teks2 h3 {
     font-size: 16px;
   }
 
   .detail_sumber2 .sumber {
     font-size: 12px;
   }
-  
+
   .detail_sumber2 .tanggal {
     font-size: 12px;
   }
-
 }
 
-@media screen and (max-width:996px) {
-
+@media screen and (max-width: 996px) {
   .artikel .detail_artikel {
     display: flex;
     flex-direction: column;
   }
-   
+
   .artikel .kiri_artikel {
     width: 120vh;
     height: 330px;
@@ -1278,7 +1284,6 @@ section.second_section .mobile_card {
     height: 50vh;
     gap: 20px;
   }
-
 
   .artikel .kanan_artikel img {
     width: 100px;
@@ -1292,11 +1297,10 @@ section.second_section .mobile_card {
   .detail_teks .sumber {
     font-size: 14px;
   }
-  
+
   .detail_teks .tanggal {
     font-size: 16px;
   }
-
 
   .detail_konsultasi {
     margin-left: 35vh;
@@ -1334,15 +1338,13 @@ section.second_section .mobile_card {
     display: flex;
     flex-direction: row;
   }
-
 }
 
-@media screen and (max-width:928px) {
+@media screen and (max-width: 928px) {
   .artikel {
     display: flex;
     align-items: center;
   }
-
 
   .artikel .kiri_artikel {
     width: 90vh;
@@ -1362,7 +1364,7 @@ section.second_section .mobile_card {
   .detail_teks .sumber {
     font-size: 12px;
   }
-  
+
   .detail_teks .tanggal {
     font-size: 14px;
   }
@@ -1408,8 +1410,7 @@ section.second_section .mobile_card {
   }
 }
 
-@media screen and (max-width:800px) {
-
+@media screen and (max-width: 800px) {
   .card_artikel {
     width: 220px;
   }
@@ -1427,7 +1428,6 @@ section.second_section .mobile_card {
   .hamburger {
     display: flex;
   }
-
 
   .Navbar {
     display: none;
@@ -1478,11 +1478,10 @@ section.second_section .mobile_card {
   }
 }
 
-@media screen and (max-width:728px) {
-
-.title4 h1{
-  font-size: 16px;
-}
+@media screen and (max-width: 728px) {
+  .title4 h1 {
+    font-size: 16px;
+  }
 
   .artikel .kiri_artikel {
     width: 75vh;
@@ -1509,18 +1508,17 @@ section.second_section .mobile_card {
     height: 150px;
   }
 
-  .detail_teks2 h3{
+  .detail_teks2 h3 {
     font-size: 14px;
   }
 
   .detail_sumber2 .sumber {
     font-size: 10px;
   }
-  
+
   .detail_sumber2 .tanggal {
     font-size: 10px;
   }
-
 
   .detail_konsultasi {
     margin-left: 16vh;
@@ -1540,11 +1538,9 @@ section.second_section .mobile_card {
   .teks_about p {
     font-size: 12px;
   }
-
 }
 
-@media screen and (max-width:676px) {
-
+@media screen and (max-width: 676px) {
   .artikel .kiri_artikel {
     width: 70vh;
     height: 300px;
@@ -1564,18 +1560,17 @@ section.second_section .mobile_card {
     height: 120px;
   }
 
-  .detail_teks2 h3{
+  .detail_teks2 h3 {
     font-size: 12px;
   }
 
   .detail_sumber2 .sumber {
     font-size: 8px;
   }
-  
+
   .detail_sumber2 .tanggal {
     font-size: 8px;
   }
-
 
   .detail_konsultasi {
     margin-left: 14vh;
@@ -1586,7 +1581,6 @@ section.second_section .mobile_card {
     justify-content: center;
     align-items: center;
     margin-top: 32px;
-
   }
 
   .detail_about {
@@ -1597,12 +1591,10 @@ section.second_section .mobile_card {
     gap: 16px;
   }
 
-
   .teks_about {
     display: flex;
     text-align: center;
     align-items: center;
-
   }
 
   .detail_about img {
@@ -1617,11 +1609,9 @@ section.second_section .mobile_card {
   .teks_about p {
     font-size: 16px;
   }
-
 }
 
-@media screen and (max-width:612px) {
-
+@media screen and (max-width: 612px) {
   .artikel .kiri_artikel {
     width: 70vh;
     height: 300px;
@@ -1641,7 +1631,7 @@ section.second_section .mobile_card {
   }
 }
 
-@media screen and (max-width:548px) {
+@media screen and (max-width: 548px) {
   .detail_konsultasi {
     margin-left: 6vh;
   }
@@ -1665,7 +1655,7 @@ section.second_section .mobile_card {
     gap: 20px;
   }
 
-  .title3 h1{
+  .title3 h1 {
     font-size: 16px;
   }
 
@@ -1676,7 +1666,7 @@ section.second_section .mobile_card {
   .detail_teks .sumber {
     font-size: 8px;
   }
-  
+
   .detail_teks .tanggal {
     font-size: 8px;
   }
@@ -1695,22 +1685,20 @@ section.second_section .mobile_card {
     height: 100px;
   }
 
-  .detail_teks2 h3{
+  .detail_teks2 h3 {
     font-size: 14px;
   }
 
   .detail_sumber2 .sumber {
     font-size: 10px;
   }
-  
+
   .detail_sumber2 .tanggal {
     font-size: 10px;
   }
-
 }
 
-@media screen and (max-width:472px) {
-
+@media screen and (max-width: 472px) {
   .detail_artikel2 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1730,7 +1718,7 @@ section.second_section .mobile_card {
     gap: 20px;
   }
 
-  .title3 h1{
+  .title3 h1 {
     font-size: 16px;
   }
 
@@ -1741,7 +1729,7 @@ section.second_section .mobile_card {
   .detail_teks .sumber {
     font-size: 8px;
   }
-  
+
   .detail_teks .tanggal {
     font-size: 8px;
   }
@@ -1760,14 +1748,14 @@ section.second_section .mobile_card {
     height: 80px;
   }
 
-  .detail_teks2 h3{
+  .detail_teks2 h3 {
     font-size: 14px;
   }
 
   .detail_sumber2 .sumber {
     font-size: 8px;
   }
-  
+
   .detail_sumber2 .tanggal {
     font-size: 8px;
   }
@@ -1823,15 +1811,6 @@ section.second_section .mobile_card {
   .Copyright p {
     font-size: 12px;
   }
-
 }
-
-
-
-
-
-
-
-
 
 /* Media Responsive End */

@@ -56,24 +56,57 @@ function calculateBMI() {
     document.querySelector(".pola_makan_kurus").style.display = "flex";
     document.querySelector(".penyakit_kurus").style.display = "block";
     document.querySelector(".program_kurus").style.display = "flex";
+    document.querySelector(".kurus_fokus").style.display = "block";
+    document.querySelector(".kurus_dft").style.display = "none";
+    document.querySelector(".normal_fokus").style.display = "none";
+    document.querySelector(".normal_dft").style.display = "block";
+    document.querySelector(".gemuk_fokus").style.display = "none";
+    document.querySelector(".gemuk_dft").style.display = "block";
+    document.querySelector(".obesitas_fokus").style.display = "none";
+    document.querySelector(".obesitas_dft").style.display = "block";
+
   } else if (bmi < 24.9) {
     description = "Normal";
     suggestion = "Terus Pertahankan Pola Hidup Sehat";
     document.querySelector(".pola_makan_ideal").style.display = "flex";
     document.querySelector(".penyakit_ideal").style.display = "block";
     document.querySelector(".program_menjaga").style.display = "flex";
+    document.querySelector(".kurus_fokus").style.display = "none";
+    document.querySelector(".kurus_dft").style.display = "block";
+    document.querySelector(".normal_fokus").style.display = "block";
+    document.querySelector(".normal_dft").style.display = "none";
+    document.querySelector(".gemuk_fokus").style.display = "none";
+    document.querySelector(".gemuk_dft").style.display = "block";
+    document.querySelector(".obesitas_fokus").style.display = "none";
+    document.querySelector(".obesitas_dft").style.display = "block";
   } else if (bmi < 29.9) {
     description = "Gemuk";
     suggestion = "Pertimbangkan Mengurangi Berat Badan";
     document.querySelector(".pola_makan_kurus").style.display = "flex";
     document.querySelector(".penyakit_obesitas").style.display = "block";
     document.querySelector(".program_obesitas").style.display = "flex";
+    document.querySelector(".kurus_fokus").style.display = "none";
+    document.querySelector(".kurus_dft").style.display = "block";
+    document.querySelector(".normal_fokus").style.display = "none";
+    document.querySelector(".normal_dft").style.display = "block";
+    document.querySelector(".gemuk_fokus").style.display = "block";
+    document.querySelector(".gemuk_dft").style.display = "none";
+    document.querySelector(".obesitas_fokus").style.display = "none";
+    document.querySelector(".obesitas_dft").style.display = "block";
   } else {
     description = "Obesitas";
     suggestion = "Konsultasikan dengan Dokter";
     document.querySelector(".pola_makan_kurus").style.display = "flex";
     document.querySelector(".penyakit_obesitas").style.display = "block";
     document.querySelector(".program_obesitas").style.display = "flex";
+    document.querySelector(".kurus_fokus").style.display = "none";
+    document.querySelector(".kurus_dft").style.display = "block";
+    document.querySelector(".normal_fokus").style.display = "none";
+    document.querySelector(".normal_dft").style.display = "block";
+    document.querySelector(".gemuk_fokus").style.display = "none";
+    document.querySelector(".gemuk_dft").style.display = "block";
+    document.querySelector(".obesitas_fokus").style.display = "block";
+    document.querySelector(".obesitas_dft").style.display = "none";
   }
 
   document.getElementById("desc").textContent = description;

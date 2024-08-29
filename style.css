@@ -119,7 +119,6 @@ nav a {
   right: -100%;
   width: 100%;
   background-color: #fff;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1444,9 +1443,14 @@ section.second_section .mobile_card {
   }
 }
 
-@media screen and (max-width:482px){
+@media screen and (max-width:472px){
+
+  section.hero_section .teks h1 {
+    font-size: 30px;
+  }
+
   .detail_konsultasi {
-    margin-left: 6vh;
+    margin-left: 0vh;
   }
 
   .detail_konsultasi h3 {
@@ -1459,8 +1463,8 @@ section.second_section .mobile_card {
   }
 
   .detail_about img {
-    width: 400px;
-    height: 220px;
+    width: 200px;
+    height: 150px;
   }
 
   .teks_about h1 {
@@ -1471,11 +1475,34 @@ section.second_section .mobile_card {
   }
 
   .mobile_card .mobile_card1 img {
-    width: 180px;
-    height: 180px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .mobile_card .mobile_card1 p {
+    font-size: 10px;
+  }
+
+  .artikel_section{
+    display: none;
+  }
+
+  .nav_footer {
+    font-size: 16px;
+  }
+
+  .logo_footer img{
+    width: 60px;
+    height: 45px;
+  }
+
+  .Copyright p{
+    font-size: 12px;
   }
 
 }
+
+
 
 
 

@@ -821,28 +821,20 @@ input[type="number"]::-webkit-outer-spin-button {
 .image_hasil {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  gap: 60px;
+  align-items: center;
 }
 
-.image_hasil {
-  width: 510px;
-  justify-content: space-between;
-}
-
-.image_hasil .kurus_hasil, .image_hasil .normal_hasil, .image_hasil .gemuk_hasil {
-  width: 80px;
-}
-
-.image_hasil .obesitas_hasil {
-  width: 120px;
-}
-
-.image_hasil .kurus_hasil img, .image_hasil .normal_hasil img, .image_hasil .gemuk_hasil img {
-  width: 100%;
+.image_hasil .kurus_hasil img,
+.image_hasil .normal_hasil img,
+.image_hasil .gemuk_hasil img {
+  width: 100px;
   height: 120px;
 }
 
 .image_hasil .obesitas_hasil img {
-  width: 100%;
+  width: 100px;
   height: 120px;
 }
 
@@ -860,37 +852,36 @@ input[type="number"]::-webkit-outer-spin-button {
   flex-direction: row;
   background-color: #f1f1f1;
   width: 500px;
-  height: 130px;
+  padding: 12px 20px;
   border-radius: 10px;
   display: none;
 }
 
-.bmi_main .info_bmi .pola_makan_kurus p,
-.bmi_main .info_bmi .pola_makan_ideal p {
-  width: 350px;
-  margin: 15px;
-  font-size: 16px;
+.bmi_main .info_bmi .pola_makan_kurus .title_makan,
+.bmi_main .info_bmi .pola_makan_ideal .title_makan {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.bmi_main .info_bmi .pola_makan_kurus .image_makan,
-.bmi_main .info_bmi .pola_makan_ideal .image_makan {
-  padding-top: 15px;
+.bmi_main .info_bmi .pola_makan_kurus p,
+.bmi_main .info_bmi .pola_makan_ideal p {
+  font-size: 16px;
 }
 
 .bmi_main .info_bmi .pola_makan_kurus .image_makan img,
 .bmi_main .info_bmi .pola_makan_ideal .image_makan img {
-  display: flex;
-  width: 100%;
-  height: 90%;
+  width: 100px;
+  height: 100px;
   border-radius: 5%;
 }
 
 .bmi_main .info_bmi .pola_makan_kurus button,
 .bmi_main .info_bmi .pola_makan_ideal button {
-  border-radius: 5%;
-  margin-left: 15px;
   background-color: #a7e6ff;
   padding: 8px;
+  width: 80%;
   border-radius: 8px;
   border: none;
   transition: 0.5s;
@@ -917,13 +908,6 @@ input[type="number"]::-webkit-outer-spin-button {
   display: none;
 }
 
-.penyakit_kurus,
-.penyakit_obesitas,
-.penyakit_kurus,
-.penyakit_kurus {
-  display: none;
-}
-
 .penyakit_obesitas h4,
 .penyakit_kurus h4,
 .penyakit_ideal h4 {
@@ -931,11 +915,9 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-top: 15px;
 }
 
-.penyakit_obesitas .list_penyakit,
-.penyakit_kurus .list_penyakit {
+.list_penyakit {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .penyakit_obesitas ul li,
@@ -953,7 +935,12 @@ input[type="number"]::-webkit-outer-spin-button {
 /* program latihan start */
 
 .program_latihan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   font-family: var(--font-family2);
+  margin: 32px 40px;
 }
 
 .program_obesitas,
@@ -961,6 +948,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .program_menjaga {
   display: flex;
   flex-direction: column;
+  gap: 32px;
   display: none;
 }
 
@@ -976,39 +964,9 @@ input[type="number"]::-webkit-outer-spin-button {
 .program_kardio,
 .program_yoga,
 .program_fungsional2 {
-  display: flex;
-  flex-direction: row;
-  gap: 70px;
-}
-
-.program_obesitas h1,
-.program_kurus h1,
-.program_menjaga h1 {
-  margin-top: 30px;
-  margin-left: 90px;
-}
-
-.program_obesitas h2,
-.program_kurus h2,
-.program_menjaga h2 {
-  margin-top: 20px;
-  margin-left: 90px;
-}
-
-.program_cardio,
-.program_atas,
-.program_core,
-.program_fleksibel,
-.program_angkat_beban,
-.program_hiit,
-.program_fungsional,
-.program_core,
-.program_kekuatan,
-.program_kardio,
-.program_yoga,
-.program_fungsional2 {
-  margin-left: 90px;
-  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
 }
 
 .program1,
@@ -1025,14 +983,13 @@ input[type="number"]::-webkit-outer-spin-button {
 .program1_nama h1,
 .program2_nama h1,
 .program3_nama h1 {
-  margin-top: 7px;
-  margin-left: 15px;
+  margin: 8px 32px;
 }
 
 .program1_reps,
 .program2_reps,
 .program3_reps {
-  margin: 4px 15px;
+  margin: 8px 32px;
 }
 
 .program1 img,
@@ -1143,6 +1100,9 @@ section.second_section .mobile_card {
 
 /* Media Responsive Start */
 @media screen and (max-width: 1029px) {
+
+  /* Index Responsive Start */
+
   .detail_konsultasi {
     margin-left: 38vh;
     padding: 4px 8px;
@@ -1267,9 +1227,41 @@ section.second_section .mobile_card {
   .detail_sumber2 .tanggal {
     font-size: 12px;
   }
+
+  /* Index Responsive End */
+
+  /* BMI Responsive Start */
+  .bmi_main .bmi_input {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bmi_main .info_bmi .pola_makan_kurus,
+  .bmi_main .info_bmi .pola_makan_ideal {
+    width: 400px;
+    height: 130px;
+  }
+
+  .penyakit_obesitas,
+  .penyakit_kurus,
+  .penyakit_ideal {
+    width: 400px;
+    height: 130px;
+  }
+
+  .penyakit_obesitas h4,
+  .penyakit_kurus h4,
+  .penyakit_ideal h4 {
+    font-size: 14px;
+  }
+
+  /* BMI Responsive End */
 }
 
 @media screen and (max-width: 996px) {
+
+  /* Index Responsive Start */
+
   .artikel .detail_artikel {
     display: flex;
     flex-direction: column;
@@ -1338,9 +1330,72 @@ section.second_section .mobile_card {
     display: flex;
     flex-direction: row;
   }
+
+  /* Index Responsive End */
+
+  /* BMI Responsive Start */
+
+  .program1,
+  .program2,
+  .program3 {
+    width: 260px;
+    height: 370px;
+  }
+
+  .program1 img,
+  .program2 img,
+  .program3 img {
+    width: 260px;
+    height: 250px;
+  }
+
+  .program1_nama h1,
+  .program2_nama h1,
+  .program3_nama h1 {
+    font-size: 16px;
+  }
+
+  .program1_reps,
+  .program2_reps,
+  .program3_reps {
+    font-size: 14px;
+  }
+
+  .program_obesitas h1,
+  .program_kurus h1,
+  .program_menjaga h1 {
+    font-size: 24px;
+  }
+
+  .program_obesitas h2,
+  .program_kurus h2,
+  .program_menjaga h2 {
+    font-size: 20px;
+  }
+
+  /* BMI Responsive End */
 }
 
 @media screen and (max-width: 928px) {
+
+  /* Index Responsive Start */
+
+  .kiri_teks h2 {
+    font-size: 16px;
+  }
+
+  .kiri_sumber .sumber {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  .kiri_sumber .tanggal {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+
   .artikel {
     display: flex;
     align-items: center;
@@ -1408,9 +1463,103 @@ section.second_section .mobile_card {
   .mobile_card .mobile_card1 p {
     font-size: 14px;
   }
+
+  /* Index Responsive End */
+
+  /* BMI Responsive Start */
+
+  .bmi_main .info_bmi {
+    gap: 32px;
+  }
+
+  .bmi_main .info_bmi .pola_makan_kurus,
+  .bmi_main .info_bmi .pola_makan_ideal {
+    width: 400px;
+    height: 130px;
+  }
+
+  .penyakit_obesitas,
+  .penyakit_kurus,
+  .penyakit_ideal {
+    width: 400px;
+    height: 130px;
+  }
+
+
+  .bmi_main .info_bmi .pola_makan_kurus p,
+  .bmi_main .info_bmi .pola_makan_ideal p {
+    font-size: 14px;
+  }
+
+  .bmi_main .info_bmi .pola_makan_kurus button,
+  .bmi_main .info_bmi .pola_makan_ideal button {
+    padding: 6px;
+    font-size: 12px;
+    width: 60%;
+  }
+
+  .penyakit_obesitas h4,
+  .penyakit_kurus h4,
+  .penyakit_ideal h4 {
+    font-size: 14px;
+  }
+
+  .bmi_main .info_bmi .pola_makan_kurus .image_makan img,
+  .bmi_main .info_bmi .pola_makan_ideal .image_makan img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5%;
+  }
+
+  .program1,
+  .program2,
+  .program3 {
+    width: 220px;
+    height: 350px;
+  }
+
+  .program1 img,
+  .program2 img,
+  .program3 img {
+    width: 220px;
+    height: 250px;
+  }
+
+  .program1_nama h1,
+  .program2_nama h1,
+  .program3_nama h1 {
+    font-size: 16px;
+  }
+
+  .program1_reps p,
+  .program2_reps p,
+  .program3_reps p {
+    font-size: 14px;
+  }
+
+  .title_program h1 {
+    font-size: 20px;
+  }
+
+  .program_obesitas h2,
+  .program_kurus h2,
+  .program_menjaga h2 {
+    font-size: 16px;
+  }
+
+  .penyakit_obesitas ul li,
+  .penyakit_kurus ul li {
+    font-size: 12px;
+  }
+
+
+  /* BMI Responsive End */
 }
 
 @media screen and (max-width: 800px) {
+
+  /* Index Responsive Start */
+
   .card_artikel {
     width: 220px;
   }
@@ -1476,9 +1625,65 @@ section.second_section .mobile_card {
     width: 220px;
     height: 220px;
   }
+
+  /* Index Responsive End */
+
+
+  /* BMI Responsive Start */
+
+  .detail_hasil {
+    font-size: 14px;
+  }
+
+  .image_hasil .kurus_hasil img,
+  .image_hasil .normal_hasil img,
+  .image_hasil .gemuk_hasil img {
+    width: 80px;
+    height: 100px;
+  }
+
+  .image_hasil .obesitas_hasil img {
+    width: 80px;
+    height: 100px;
+  }
+
+  .bmi_scale div {
+    display: flex;
+    padding: 8px 40px;
+  }
+
+  .image_hasil {
+    gap: 42px;
+  }
+
+  .program1,
+  .program2,
+  .program3 {
+    width: 200px;
+    height: 340px;
+  }
+
+  .program1 img,
+  .program2 img,
+  .program3 img {
+    width: 200px;
+    height: 220px;
+  }
+
+  .penyakit_obesitas ul li,
+  .penyakit_kurus ul li {
+    font-size: 10px;
+  }
+
+
+
+  /* BMI Responsive End */
 }
 
 @media screen and (max-width: 728px) {
+
+  /* Index Responsive Start */
+
   .title4 h1 {
     font-size: 16px;
   }
@@ -1538,9 +1743,85 @@ section.second_section .mobile_card {
   .teks_about p {
     font-size: 12px;
   }
+
+  /* Index Responsive End */
+
+
+  /* BMI Responsive Start */
+
+  .bmi_main .bmi_input input {
+    height: 45px;
+    width: 400px;
+  }
+
+  .img_bmi img {
+    width: 450px;
+    height: 300px;
+  }
+
+  .gender_pria button {
+    width: 90%;
+    height: 90%;
+  }
+
+  .gender_wanita button {
+    width: 90%;
+    height: 90%;
+  }
+
+  .program_cardio,
+  .program_atas,
+  .program_core,
+  .program_fleksibel,
+  .program_angkat_beban,
+  .program_hiit,
+  .program_fungsional,
+  .program_core,
+  .program_kekuatan,
+  .program_kardio,
+  .program_yoga,
+  .program_fungsional2 {
+    gap: 26px;
+  }
+
+  .penyakit_obesitas ul li,
+  .penyakit_kurus ul li {
+    font-size: 10px;
+  }
+
+  .penyakit_obesitas h4,
+  .penyakit_kurus h4,
+  .penyakit_ideal h4 {
+    font-size: 10px;
+  }
+
+  .bmi_main .info_bmi .pola_makan_kurus button,
+  .bmi_main .info_bmi .pola_makan_ideal button {
+    padding: 8px;
+    font-size: 8px;
+    width: 60%;
+  }
+
+  .bmi_main .info_bmi .pola_makan_kurus .image_makan img,
+  .bmi_main .info_bmi .pola_makan_ideal .image_makan img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .bmi_main .info_bmi .pola_makan_kurus p,
+  .bmi_main .info_bmi .pola_makan_ideal p {
+    font-size: 12px;
+  }
+
+
+
+  /* BMI Responsive End */
 }
 
 @media screen and (max-width: 676px) {
+
+  /* Index Responsive Start */
+
   .artikel .kiri_artikel {
     width: 70vh;
     height: 300px;
@@ -1609,9 +1890,60 @@ section.second_section .mobile_card {
   .teks_about p {
     font-size: 16px;
   }
+
+  /* Index Responsive End */
+
+  /* BMI Responsive Start */
+
+  .program1,
+  .program2,
+  .program3 {
+    width: 180px;
+    height: 320px;
+  }
+
+  .program1 img,
+  .program2 img,
+  .program3 img {
+    width: 180px;
+    height: 200px;
+  }
+
+  .program1_nama h1,
+  .program2_nama h1,
+  .program3_nama h1 {
+    font-size: 14px;
+  }
+
+  .program1_reps p,
+  .program2_reps p,
+  .program3_reps p {
+    font-size: 12px;
+  }
+
+  .program_cardio,
+  .program_atas,
+  .program_core,
+  .program_fleksibel,
+  .program_angkat_beban,
+  .program_hiit,
+  .program_fungsional,
+  .program_core,
+  .program_kekuatan,
+  .program_kardio,
+  .program_yoga,
+  .program_fungsional2 {
+    gap: 20px;
+  }
+
+
+  /* BMI Responsive End */
 }
 
 @media screen and (max-width: 612px) {
+
+  /* Index Responsive Start */
+
   .artikel .kiri_artikel {
     width: 70vh;
     height: 300px;
@@ -1629,9 +1961,125 @@ section.second_section .mobile_card {
   .mobile_card .mobile_card1 p {
     font-size: 12px;
   }
+
+  /* Index Responsive End */
+
+
+  /* BMI Responsive Start */
+
+  .bmi_title {
+    text-align: center;
+  }
+
+  .image_hasil .kurus_hasil img,
+  .image_hasil .normal_hasil img,
+  .image_hasil .gemuk_hasil img {
+    width: 80px;
+    height: 100px;
+  }
+
+  .image_hasil .obesitas_hasil img {
+    width: 80px;
+    height: 100px;
+  }
+
+  .bmi_scale div {
+    display: flex;
+    padding: 8px 28px;
+  }
+
+  .image_hasil {
+    gap: 32px;
+  }
+
+  .program_cardio,
+  .program_atas,
+  .program_core,
+  .program_fleksibel,
+  .program_angkat_beban,
+  .program_hiit,
+  .program_fungsional,
+  .program_core,
+  .program_kekuatan,
+  .program_kardio,
+  .program_yoga,
+  .program_fungsional2 {
+    gap: 18px;
+  }
+
+
+  .program1,
+  .program2,
+  .program3 {
+    width: 160px;
+    height: 280px;
+  }
+
+  .program1 img,
+  .program2 img,
+  .program3 img {
+    width: 160px;
+    height: 180px;
+  }
+
+  .program1_nama h1,
+  .program2_nama h1,
+  .program3_nama h1 {
+    font-size: 14px;
+  }
+
+  .program1_reps p,
+  .program2_reps p,
+  .program3_reps p {
+    font-size: 12px;
+  }
+
+  .title_program h1 {
+    font-size: 18px;
+  }
+
+  .program_obesitas h2,
+  .program_kurus h2,
+  .program_menjaga h2 {
+    font-size: 14px;
+  }
+
+  .penyakit_obesitas ul li,
+  .penyakit_kurus ul li {
+    font-size: 8px;
+  }
+
+  .penyakit_obesitas h4,
+  .penyakit_kurus h4,
+  .penyakit_ideal h4 {
+    font-size: 8px;
+  }
+
+  .bmi_main .info_bmi .pola_makan_kurus button,
+  .bmi_main .info_bmi .pola_makan_ideal button {
+    padding: 8px;
+    font-size: 6px;
+    width: 60%;
+  }
+
+  .bmi_main .info_bmi .pola_makan_kurus .image_makan img,
+  .bmi_main .info_bmi .pola_makan_ideal .image_makan img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .bmi_main .info_bmi .pola_makan_kurus p,
+  .bmi_main .info_bmi .pola_makan_ideal p {
+    font-size: 10px;
+  }
+
+  /* BMI Responsive End*/
 }
 
 @media screen and (max-width: 548px) {
+
+  /* Index Responsive Start*/
+
   .detail_konsultasi {
     margin-left: 6vh;
   }
@@ -1696,9 +2144,133 @@ section.second_section .mobile_card {
   .detail_sumber2 .tanggal {
     font-size: 10px;
   }
+
+  /* Index Responsive End */
+
+
+  /* BMI Responsive Start */
+
+  .img_bmi img {
+    width: 400px;
+    height: 250px;
+  }
+
+  .gender_pria button {
+    width: 90%;
+    height: 90%;
+  }
+
+  .gender_wanita button {
+    width: 90%;
+    height: 90%;
+  }
+
+  .image_hasil .kurus_hasil img,
+  .image_hasil .normal_hasil img,
+  .image_hasil .gemuk_hasil img {
+    width: 60px;
+    height: 80px;
+  }
+
+  .image_hasil .obesitas_hasil img {
+    width: 60px;
+    height: 80px;
+  }
+
+  .bmi_scale div {
+    display: flex;
+    padding: 8px 10px;
+  }
+
+  .image_hasil {
+    gap: 32px;
+  }
+
+  .program1,
+  .program2,
+  .program3 {
+    width: 145px;
+    height: 260px;
+  }
+
+  .program1 img,
+  .program2 img,
+  .program3 img {
+    width: 145px;
+    height: 160px;
+  }
+
+  .program1_nama h1,
+  .program2_nama h1,
+  .program3_nama h1 {
+    font-size: 12px;
+  }
+
+  .program1_reps p,
+  .program2_reps p,
+  .program3_reps p {
+    font-size: 10px;
+  }
+
+  .program_cardio,
+  .program_atas,
+  .program_core,
+  .program_fleksibel,
+  .program_angkat_beban,
+  .program_hiit,
+  .program_fungsional,
+  .program_core,
+  .program_kekuatan,
+  .program_kardio,
+  .program_yoga,
+  .program_fungsional2 {
+    gap: 12px;
+  }
+
+  .penyakit_obesitas ul li,
+  .penyakit_kurus ul li {
+    font-size: 6px;
+  }
+
+  .penyakit_obesitas h4,
+  .penyakit_kurus h4,
+  .penyakit_ideal h4 {
+    font-size: 6px;
+  }
+
+  .bmi_main .info_bmi .pola_makan_kurus .image_makan img,
+  .bmi_main .info_bmi .pola_makan_ideal .image_makan img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .bmi_main .info_bmi .pola_makan_kurus p,
+  .bmi_main .info_bmi .pola_makan_ideal p {
+    font-size: 8px;
+  }
+
+  .penyakit_obesitas,
+  .penyakit_kurus,
+  .penyakit_ideal {
+    width: 500px;
+    height: 100px;
+  }
+
+  .bmi_main .info_bmi .pola_makan_kurus,
+  .bmi_main .info_bmi .pola_makan_ideal {
+    width: 500px;
+    height: 100px;
+  }
+
+  
+
+  /* BMI Responsive End */
 }
 
 @media screen and (max-width: 472px) {
+
+  /* Index Responsive Start */
+
   .detail_artikel2 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1811,6 +2383,181 @@ section.second_section .mobile_card {
   .Copyright p {
     font-size: 12px;
   }
+
+  /* Index Responsive End */
+
+  /* BMI Responsive Start */
+
+  .bmi_main .bmi_gender {
+    gap: 32px;
+  }
+
+  .bmi_title h1 {
+    font-size: 20px;
+  }
+
+  .bmi_title p {
+    font-size: 14px;
+  }
+
+  .img_bmi img {
+    width: 300px;
+    height: 200px;
+  }
+
+  .bmi_main .bmi_input input {
+    height: 45px;
+    width: 300px;
+  }
+
+  .bmi_main .bmi_input p {
+    font-size: 14px;
+  }
+
+  .gender_pria button {
+    width: 100%;
+    height: 90%;
+  }
+
+  .gender_wanita button {
+    width: 100%;
+    height: 90%;
+  }
+
+  .program1,
+  .program2,
+  .program3 {
+    width: 110px;
+    height: 220px;
+  }
+
+  .program1 img,
+  .program2 img,
+  .program3 img {
+    width: 110px;
+    height: 120px;
+  }
+
+  .program1_nama h1,
+  .program2_nama h1,
+  .program3_nama h1 {
+    font-size: 10px;
+    margin: 4px 16px;
+  }
+
+  .program1_reps p,
+  .program2_reps p,
+  .program3_reps p {
+    font-size: 8px;
+  }
+
+  .title_program h1 {
+    font-size: 14px;
+  }
+
+  .program_obesitas h2,
+  .program_kurus h2,
+  .program_menjaga h2 {
+    font-size: 12px;
+  }
+
+
+  .program_cardio,
+  .program_atas,
+  .program_core,
+  .program_fleksibel,
+  .program_angkat_beban,
+  .program_hiit,
+  .program_fungsional,
+  .program_core,
+  .program_kekuatan,
+  .program_kardio,
+  .program_yoga,
+  .program_fungsional2 {
+    gap: 8px;
+  }
+
+  
+  .penyakit_obesitas,
+  .penyakit_kurus,
+  .penyakit_ideal {
+    width: 400px;
+    height: 120px;
+  }
+
+  .bmi_main .info_bmi .pola_makan_kurus,
+  .bmi_main .info_bmi .pola_makan_ideal {
+    width: 400px;
+    height: 120px;
+  }
+
+  .bmi_main .info_bmi .pola_makan_kurus .image_makan img,
+  .bmi_main .info_bmi .pola_makan_ideal .image_makan img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .bmi_main .info_bmi .pola_makan_kurus p,
+  .bmi_main .info_bmi .pola_makan_ideal p {
+    font-size: 6px;
+  }
+
+  .bmi_main .info_bmi .pola_makan_kurus button,
+  .bmi_main .info_bmi .pola_makan_ideal button {
+    padding: 8px;
+    font-size: 8px;
+    width: 100%;
+  }
+
+  .penyakit_obesitas ul li,
+  .penyakit_kurus ul li {
+    font-size: 6px;
+  }
+
+  .penyakit_obesitas h4,
+  .penyakit_kurus h4,
+  .penyakit_ideal h4 {
+    font-size: 6px;
+  }
+
+  .image_hasil .kurus_hasil img,
+  .image_hasil .normal_hasil img,
+  .image_hasil .gemuk_hasil img {
+    width: 60px;
+    height: 80px;
+  }
+
+  .image_hasil .obesitas_hasil img {
+    width: 60px;
+    height: 80px;
+  }
+
+  .bmi_scale div {
+    display: flex;
+    padding: 8px 10px;
+  }
+
+  .image_hasil {
+    gap: 32px;
+  }
+
+  .kurus h4,
+  .gemuk h4,
+  .normal h4,
+  .obesitas h4{
+    font-size: 16px;
+  }
+  .kurus p,
+  .gemuk p,
+  .normal p,
+  .obesitas p{
+    font-size: 12px;
+  }
+
+
+
+
+  /* BMI Responsive End */
 }
 
 /* Media Responsive End */

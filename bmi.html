@@ -1,707 +1,725 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="script.js"></script>
+    <title>BMI Test</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <script src="script.js"></script>
-  <title>BMI Test</title>
-</head>
-
-<body>
-  <!-- Nav Start -->
-  <nav>
-    <div class="title">
-      <a href="index.html">
-        <img src="assets/logo_fito.png" alt="" />
-        <h1>FITO</h1>
-      </a>
-    </div>
-
-    <div class="Navbar">
-      <a href="index.html"><i class="bx bx-home"> </i>Home</a>
-      <a href="index.html#manfaat"><i class="bx bx-bulb"> </i>Solutions</a>
-      <a href="index.html#about"><i class="bx bx-conversation"> </i>About</a>
-      <a href="index.html#artikel"><i class="bx bx-news"> </i>Article</a>
-      <a href="index.html#footer"><i class="bx bx-phone"> </i>Contact</a>
-      <a href="bmi.html">
-        <button>MULAI <i class="bx bx-rocket"></i></button>
-      </a>
-    </div>
-
-    <div class="nav_hamburger">
-      <a href="index.html"><i class="bx bx-home"> </i>Home</a>
-      <a href="index.html#manfaat"><i class="bx bx-bulb"> </i>Solutions</a>
-      <a href="index.html#about"><i class="bx bx-conversation"> </i>About</a>
-      <a href="index.html#artikel"><i class="bx bx-news"> </i>Article</a>
-      <a href="index.html#footer"><i class="bx bx-phone"> </i>Contact</a>
-      <a href="bmi.html">
-        <button>MULAI <i class="bx bx-rocket"></i></button>
-      </a>
-  </div>
-
-  <div class="hamburger">
-      <i class='bx bx-menu'></i>
-  </div>
-  </nav>
-  <!-- Nav End -->
-
-  <!-- bmi main start -->
-
-  <section class="bmi_main">
-    <div class="bmi_title">
-      <h1>Body Mass Index</h1>
-      <p>Kita cek index massa tubuhmu dulu ya</p>
-    </div>
-
-    <div class="bmi_gender">
-      <div class="gender_pria" id="genderPria">
-        <div class="img_pria">
-          <button>
-            <img src="assets/man.png" alt="Pria" />
-            <p>Pria<i class='bx bx-male-sign'></i></p>
-          </button>
-        </div>
-      </div>
-      <div class="gender_wanita">
-        <div class="img_wanita">
-          <button>
-            <img src="assets/women.png" alt="" />
-            <p>Wanita<i class='bx bx-female-sign'></i></p>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <form class="bmi_input" id="bmiForm">
-      <div class="img_bmi">
-        <img src="assets/bg-bmi.jpg" alt="">
-      </div>
-      <div class="input">
-        <div class="bmi_tinggi" id="height">
-          <p>Tinggi Badan :</p>
-          <input id="heightInput" type="number" placeholder="Berapa Tinggi Kamu (cm)" />
-        </div>
-        <div class="bmi_berat" id="weightt">
-          <p>Berat Badan :</p>
-          <input id="weightInput" type="number" placeholder="Berapa Berat Kamu (kg)" />
-        </div>
-  
-        <div class="button_bmi">
-          <a href="#bmiHasil">
-            <button type="button" onclick="calculateBMI()">Cek Sekarang</button>
-          </a>
-        </div>
-      </div>
-    </form>
-
-    <div class="bmi_hasil hidden">
-      <div class="detail_hasil">
-        <h1>BMI kamu adalah</h1>
-        <p id="bmi" class="bmi_angka">0</p>
-        <p id="desc" class="bmi_desc">N/A</p>
-        <p class="bmi_saran">Perbanyak Olahraga</p>
+  <body>
+    <!-- Nav Start -->
+    <nav>
+      <div class="title">
+        <a href="index.html">
+          <img src="assets/logo_fito.png" alt="" />
+          <h1>FITO</h1>
+        </a>
       </div>
 
-      <div class="image_hasil">
-        <div class="kurus_hasil">
-          <img src="assets/kurus.png" alt="" class="kurus_dft">
-          <img src="assets/kurus_biru.png" alt="" class="kurus_fokus">
+      <div class="Navbar">
+        <a href="index.html"><i class="bx bx-home"> </i>Home</a>
+        <a href="index.html#manfaat"><i class="bx bx-bulb"> </i>Solutions</a>
+        <a href="index.html#about"><i class="bx bx-conversation"> </i>About</a>
+        <a href="index.html#artikel"><i class="bx bx-news"> </i>Article</a>
+        <a href="index.html#footer"><i class="bx bx-phone"> </i>Contact</a>
+        <a href="bmi.html">
+          <button>MULAI <i class="bx bx-rocket"></i></button>
+        </a>
+      </div>
+
+      <div class="nav_hamburger">
+        <a href="index.html"><i class="bx bx-home"> </i>Home</a>
+        <a href="index.html#manfaat"><i class="bx bx-bulb"> </i>Solutions</a>
+        <a href="index.html#about"><i class="bx bx-conversation"> </i>About</a>
+        <a href="index.html#artikel"><i class="bx bx-news"> </i>Article</a>
+        <a href="index.html#footer"><i class="bx bx-phone"> </i>Contact</a>
+        <a href="bmi.html">
+          <button>MULAI <i class="bx bx-rocket"></i></button>
+        </a>
+      </div>
+
+      <div class="hamburger">
+        <i class="bx bx-menu"></i>
+      </div>
+    </nav>
+    <!-- Nav End -->
+
+    <!-- bmi main start -->
+
+    <section class="bmi_main">
+      <div class="bmi_title">
+        <h1>Body Mass Index</h1>
+        <p>Kita cek index massa tubuhmu dulu ya</p>
+      </div>
+
+      <div class="bmi_gender">
+        <div class="gender_pria" id="genderPria">
+          <div class="img_pria">
+            <button>
+              <img src="assets/man.png" alt="Pria" />
+              <p>Pria<i class="bx bx-male-sign"></i></p>
+            </button>
+          </div>
         </div>
-        <div class="normal_hasil">
-          <img src="assets/kurus.png" alt="" class="normal_dft">
-          <img src="assets/kurus_biru.png" alt="" class="normal_fokus">
-        </div>
-        <div class="gemuk_hasil">
-          <img src="assets/gemuk.png" alt="" class="gemuk_dft">
-          <img src="assets/gemuk_biru.png" alt="" class="gemuk_fokus">
-        </div>
-        <div class="obesitas_hasil">
-          <img src="assets/obesitas.png" alt="" class="obesitas_dft">
-          <img src="assets/obesitas_biru.png" alt="" class="obesitas_fokus">
+        <div class="gender_wanita">
+          <div class="img_wanita">
+            <button>
+              <img src="assets/women.png" alt="" />
+              <p>Wanita<i class="bx bx-female-sign"></i></p>
+            </button>
+          </div>
         </div>
       </div>
 
-      <div class="bmi_scale">
-        <div class="kurus" style="--color: var(--kurus)">
-          <h4>Kurus</h4>
-          <p>&lt; 18,5</p>
+      <form class="bmi_input" id="bmiForm">
+        <div class="img_bmi">
+          <img src="assets/bg-bmi.jpg" alt="" />
         </div>
-        <div class="normal" style="--color: var(--normal)">
-          <h4>Normal</h4>
-          <p>18,5-24,9</p>
-        </div>
-        <div class="gemuk" style="--color: var(--gemuk)">
-          <h4>Gemuk</h4>
-          <p>25-30</p>
-        </div>
-        <div class="obesitas" style="--color: var(--obesitas)">
-          <h4>Obesitas</h4>
-          <p>> 30</p>
-        </div>
-      </div>
-    </div>
+        <div class="input">
+          <div class="bmi_tinggi" id="height">
+            <p>Tinggi Badan :</p>
+            <input
+              id="heightInput"
+              type="number"
+              placeholder="Berapa Tinggi Kamu (cm)"
+            />
+          </div>
+          <div class="bmi_berat" id="weightt">
+            <p>Berat Badan :</p>
+            <input
+              id="weightInput"
+              type="number"
+              placeholder="Berapa Berat Kamu (kg)"
+            />
+          </div>
 
-    <!-- info bmi start -->
-    <div class="info_bmi">
-      <div class="pola_makan_kurus">
-        <div class="title_makan">
-          <p>
-            Pola makan yang buruk dapat berkontribusi hingga 20-30% terhadap
-            risiko pengembangan berbagai penyakit.
-          </p>
-          <a href="">
-            <button>Konsultasi Dokter</button>
-          </a>
-        </div>
-        <div class="image_makan">
-          <img src="assets/menu_diet.jpg" alt="" />
-        </div>
-      </div>
-      <div class="pola_makan_ideal">
-        <div class="title_makan">
-          <p>
-            Berat badan Anda sudah ideal, tetaplah menjaga pola makan sehat
-            untuk mempertahankannya.
-          </p>
-          <a href="">
-            <button>Konsultasi Dokter</button>
-          </a>
-        </div>
-        <div class="image_makan">
-          <img src="assets/menu_diet.jpg" alt="" />
-        </div>
-      </div>
-      <div class="penyakit_obesitas">
-        <h4>Berat badan berlebih dapat menyebabkan berbagai penyakit</h4>
-        <div class="list_penyakit">
-          <div class="list1">
-            <ul>
-              <li>Penyakit jantung koroner</li>
-              <li>Tekanan darah tinggi</li>
-              <li>Diabetes tipe 2</li>
-            </ul>
-          </div>
-          <div class="list2">
-            <ul>
-              <li>Osteoartritis</li>
-              <li>Gangguan pernapasan</li>
-              <li>Stroke</li>
-            </ul>
+          <div class="button_bmi">
+            <a href="#bmiHasil">
+              <button type="button" onclick="calculateBMI()">
+                Cek Sekarang
+              </button>
+            </a>
           </div>
         </div>
-      </div>
-      <div class="penyakit_kurus">
-        <h4>Berat badan rendah dapat menyebabkan berbagai penyakit</h4>
-        <div class="list_penyakit">
-          <div class="list1">
-            <ul>
-              <li>Malnutrisi</li>
-              <li>Anemia</li>
-              <li>Osteoporosis</li>
-            </ul>
-          </div>
-          <div class="list2">
-            <ul>
-              <li>Kelelahan kronis</li>
-              <li>Amenore</li>
-              <li>Gangguan pertumbuhan</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="penyakit_ideal">
-        <h4>Tetap jaga pola hidup sehat supaya berat badan tetap ideal.</h4>
-      </div>
-    </div>
+      </form>
 
-    <!-- info bmi end-->
-  </section>
+      <div class="bmi_hasil hidden">
+        <div class="detail_hasil">
+          <h1>BMI kamu adalah</h1>
+          <p id="bmi" class="bmi_angka">0</p>
+          <p id="desc" class="bmi_desc">N/A</p>
+          <p class="bmi_saran">Perbanyak Olahraga</p>
+        </div>
 
+        <div class="image_hasil">
+          <div class="kurus_hasil">
+            <img src="assets/kurus.png" alt="" class="kurus_dft" />
+            <img src="assets/kurus_biru.png" alt="" class="kurus_fokus" />
+          </div>
+          <div class="normal_hasil">
+            <img src="assets/normal.png" alt="" class="normal_dft" />
+            <img src="assets/normal_hijau.png" alt="" class="normal_fokus" />
+          </div>
+          <div class="gemuk_hasil">
+            <img src="assets/gemuk.png" alt="" class="gemuk_dft" />
+            <img src="assets/gemuk_orange.png" alt="" class="gemuk_fokus" />
+          </div>
+          <div class="obesitas_hasil">
+            <img src="assets/obesitas.png" alt="" class="obesitas_dft" />
+            <img
+              src="assets/obesitas_merah.png"
+              alt=""
+              class="obesitas_fokus"
+            />
+          </div>
+        </div>
 
-  <!-- pola latihan start -->
-  <section class="program_latihan">
-    <div class="program_obesitas">
-      <div class="title_program">
-        <h1>Program Menurunkan Berat Badan</h1>
-      </div>
-      <h2>1. Cardio</h2>
-      <div class="program_cardio">
-        <div class="program1">
-          <div class="program1_image">
-            <img src="assets/jogging.jpg" alt="" />
+        <div class="bmi_scale">
+          <div class="kurus" style="--color: var(--kurus)">
+            <h4>Kurus</h4>
+            <p>&lt; 18,5</p>
           </div>
-          <div class="program1_nama">
-            <h1>Jalan Santai</h1>
+          <div class="normal" style="--color: var(--normal)">
+            <h4>Normal</h4>
+            <p>18,5-24,9</p>
           </div>
-          <div class="program1_reps">
-            <p>Durasi 30 menit</p>
+          <div class="gemuk" style="--color: var(--gemuk)">
+            <h4>Gemuk</h4>
+            <p>25-30</p>
           </div>
-        </div>
-        <div class="program2">
-          <div class="program2_image">
-            <img src="assets/berenang.jpg" alt="" />
-          </div>
-          <div class="program2_nama">
-            <h1>Berenang</h1>
-          </div>
-          <div class="program2_reps">
-            <p>Durasi 30 menit</p>
-          </div>
-        </div>
-        <div class="program3">
-          <div class="program3_image">
-            <img src="assets/sepeda_statis.jpg" alt="" />
-          </div>
-          <div class="program3_nama">
-            <h1>Sepeda Statis</h1>
-          </div>
-          <div class="program3_reps">
-            <p>Durasi 30 menit</p>
+          <div class="obesitas" style="--color: var(--obesitas)">
+            <h4>Obesitas</h4>
+            <p>> 30</p>
           </div>
         </div>
       </div>
-      <h2>2. Latihan Kekuatan Tubuh Bagian Atas</h2>
-      <div class="program_atas">
-        <div class="program1">
-          <div class="program1_image">
-            <img src="assets/bicep_curl.jpg" alt="" />
-          </div>
-          <div class="program1_nama">
-            <h1>Bicep Curls</h1>
-          </div>
-          <div class="program1_reps">
-            <p>3 set x 12 - 15 reps</p>
-          </div>
-        </div>
-        <div class="program2">
-          <div class="program2_image">
-            <img src="assets/shoulder.jpg" alt="" />
-          </div>
-          <div class="program2_nama">
-            <h1>Shoulder Presess</h1>
-          </div>
-          <div class="program2_reps">
-            <p>3 set x 10 - 12 reps</p>
-          </div>
-        </div>
-        <div class="program3">
-          <div class="program3_image">
-            <img src="assets/lat_pulldown.jpg" alt="" />
-          </div>
-          <div class="program3_nama">
-            <h1>Lat Pulldowns</h1>
-          </div>
-          <div class="program3_reps">
-            <p>3 set x 12 - 15 reps</p>
-          </div>
-        </div>
-      </div>
-      <h2>3. Latihan Core Ringan</h2>
-      <div class="program_core">
-        <div class="program1">
-          <div class="program1_image">
-            <img src="assets/twist.jpg" alt="" />
-          </div>
-          <div class="program1_nama">
-            <h1>Russian Twists</h1>
-          </div>
-          <div class="program1_reps">
-            <p>3 set x 15 - 20 reps</p>
-          </div>
-        </div>
-        <div class="program2">
-          <div class="program2_image">
-            <img src="assets/plank.jpg" alt="" />
-          </div>
-          <div class="program2_nama">
-            <h1>Plank</h1>
-          </div>
-          <div class="program2_reps">
-            <p>3 set x 20 - 30 detik</p>
-          </div>
-        </div>
-        <div class="program3">
-          <div class="program3_image">
-            <img src="assets/sepeda_statis.jpg" alt="" />
-          </div>
-          <div class="program3_nama">
-            <h1>Leg Raises</h1>
-          </div>
-          <div class="program3_reps">
-            <p>3 set x 12 - 15 reps</p>
-          </div>
-        </div>
-      </div>
-      <h2>4. Latihan Fleksibilitas</h2>
-      <div class="program_fleksibel">
-        <div class="program1">
-          <div class="program1_image">
-            <img src="assets/hamstring.jpg" alt="" />
-          </div>
-          <div class="program1_nama">
-            <h1>Streching Hamstring</h1>
-          </div>
-          <div class="program1_reps">
-            <p>Durasi 2 - 3 menit</p>
-          </div>
-        </div>
-        <div class="program2">
-          <div class="program2_image">
-            <img src="assets/shoulder_stretches.jpg" alt="" />
-          </div>
-          <div class="program2_nama">
-            <h1>Shoulder Streching</h1>
-          </div>
-          <div class="program2_reps">
-            <p>Durasi 2 - 3 menit</p>
-          </div>
-        </div>
-        <div class="program3">
-          <div class="program3_image">
-            <img src="assets/sepeda_statis.jpg" alt="" />
-          </div>
-          <div class="program3_nama">
-            <h1>Hand Streching</h1>
-          </div>
-          <div class="program3_reps">
-            <p>Durasi 2 - 3 menit</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="program_kurus">
-      <div class="title_program">
-        <h1>Program Menaikkan Berat Badan</h1>
-      </div>
-      <h2>1. Angkat Beban</h2>
-      <div class="program_angkat_beban">
-        <div class="program1">
-          <div class="program1_image">
-            <img src="assets/bench_press.jpg" alt="" />
-          </div>
-          <div class="program1_nama">
-            <h1>Bench Press</h1>
-          </div>
-          <div class="program1_reps">
-            <p>4 set x 8-12 reps</p>
-          </div>
-        </div>
-        <div class="program2">
-          <div class="program2_image">
-            <img src="assets/Overhead_Press.jpg" alt="" />
-          </div>
-          <div class="program2_nama">
-            <h1>Overhead Press</h1>
-          </div>
-          <div class="program2_reps">
-            <p>4 set x 8-12 reps</p>
-          </div>
-        </div>
-        <div class="program3">
-          <div class="program3_image">
-            <img src="assets/Lunges.jpg" alt="" />
-          </div>
-          <div class="program3_nama">
-            <h1>Lunges</h1>
-          </div>
-          <div class="program3_reps">
-            <p>4 set x 10-15 reps per kaki</p>
-          </div>
-        </div>
-      </div>
-      <h2>2. Latihan HIIT</h2>
-      <div class="program_hiit">
-        <div class="program1">
-          <div class="program1_image">
-            <img src="assets/Burpees.jpg" alt="" />
-          </div>
-          <div class="program1_nama">
-            <h1>Burpees</h1>
-          </div>
-          <div class="program1_reps">
-            <p>30 detik kerja, 30 detik istirahat (ulang 8-10 kali)</p>
-          </div>
-        </div>
-        <div class="program2">
-          <div class="program2_image">
-            <img src="assets/Mountain_Climbers.jpg" alt="" />
-          </div>
-          <div class="program2_nama">
-            <h1>Mountain Climbers</h1>
-          </div>
-          <div class="program2_reps">
-            <p>30 detik kerja, 30 detik istirahat (ulang 8-10 kali)</p>
-          </div>
-        </div>
-        <div class="program3">
-          <div class="program3_image">
-            <img src="assets/Jump_Squats.jpg" alt="" />
-          </div>
-          <div class="program3_nama">
-            <h1>Jump Squats</h1>
-          </div>
-          <div class="program3_reps">
-            <p>30 detik kerja, 30 detik istirahat (ulang 8-10 kali)</p>
-          </div>
-        </div>
-      </div>
-      <h2>3. Latihan Fungsional</h2>
-      <div class="program_fungsional">
-        <div class="program1">
-          <div class="program1_image">
-            <img src="assets/Kettlebell_Swings.jpg" alt="" />
-          </div>
-          <div class="program1_nama">
-            <h1>Kettlebell Swings</h1>
-          </div>
-          <div class="program1_reps">
-            <p>3 set x 15 reps</p>
-          </div>
-        </div>
-        <div class="program2">
-          <div class="program2_image">
-            <img src="assets/Box_Jumps.jpg" alt="" />
-          </div>
-          <div class="program2_nama">
-            <h1>Box Jumps</h1>
-          </div>
-          <div class="program2_reps">
-            <p>3 set x 10-12 reps</p>
-          </div>
-        </div>
-        <div class="program3">
-          <div class="program3_image">
-            <img src="assets/Battle_Ropes.jpg" alt="" />
-          </div>
-          <div class="program3_nama">
-            <h1>Battle Ropes</h1>
-          </div>
-          <div class="program3_reps">
-            <p>3 set x 30 detik</p>
-          </div>
-        </div>
-      </div>
-      <h2>4. Latihan Core</h2>
-      <div class="program_core">
-        <div class="program1">
-          <div class="program1_image">
-            <img src="assets/Russian_Twists.jpg" alt="" />
-          </div>
-          <div class="program1_nama">
-            <h1>Russian Twists</h1>
-          </div>
-          <div class="program1_reps">
-            <p>3 set x 15-20 reps</p>
-          </div>
-        </div>
-        <div class="program2">
-          <div class="program2_image">
-            <img src="assets/Bicycle_Crunches.jpg" alt="" />
-          </div>
-          <div class="program2_nama">
-            <h1>Bicycle Crunches</h1>
-          </div>
-          <div class="program2_reps">
-            <p>3 set x 15-20 reps per sisi</p>
-          </div>
-        </div>
-        <div class="program3">
-          <div class="program3_image">
-            <img src="assets/Toe_Touches.jpg" alt="" />
-          </div>
-          <div class="program3_nama">
-            <h1>Toe Touches</h1>
-          </div>
-          <div class="program3_reps">
-            <p>3 set x 15-20 reps</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="program_menjaga">
-      <div class="title_program">
-        <h1>Program Menjaga Berat Badan</h1>
-      </div>
-      <h2>1. Latihan Kekuatan</h2>
-      <div class="program_kekuatan">
-        <div class="program1">
-          <div class="program1_image">
-            <img src="assets/Deadlifts.jpg" alt="" />
-          </div>
-          <div class="program1_nama">
-            <h1>Deadlifts</h1>
-          </div>
-          <div class="program1_reps">
-            <p>4 set x 6-10 reps</p>
-          </div>
-        </div>
-        <div class="program2">
-          <div class="program2_image">
-            <img src="assets/Pull-Ups.jpg" alt="" />
-          </div>
-          <div class="program2_nama">
-            <h1>Pull-Ups</h1>
-          </div>
-          <div class="program2_reps">
-            <p>4 set x 6-10 reps</p>
-          </div>
-        </div>
-        <div class="program3">
-          <div class="program3_image">
-            <img src="assets/Overhead_Press.jpg" alt="" />
-          </div>
-          <div class="program3_nama">
-            <h1>Overhead Press</h1>
-          </div>
-          <div class="program3_reps">
-            <p>4 set x 6-10 reps</p>
-          </div>
-        </div>
-      </div>
-      <h2>2. Cardio</h2>
-      <div class="program_kardio">
-        <div class="program1">
-          <div class="program1_image">
-            <img src="assets/berenang.jpg" alt="" />
-          </div>
-          <div class="program1_nama">
-            <h1>Berenang</h1>
-          </div>
-          <div class="program1_reps">
-            <p>Durasi 30 menit pada intensitas moderat</p>
-          </div>
-        </div>
-        <div class="program2">
-          <div class="program2_image">
-            <img src="assets/Rowing_Machine.jpg" alt="" />
-          </div>
-          <div class="program2_nama">
-            <h1>Rowing Machine</h1>
-          </div>
-          <div class="program2_reps">
-            <p>Durasi 20-30 menit</p>
-          </div>
-        </div>
-        <div class="program3">
-          <div class="program3_image">
-            <img src="assets/berlari.jpg" alt="" />
-          </div>
-          <div class="program3_nama">
-            <h1>Berlari</h1>
-          </div>
-          <div class="program3_reps">
-            <p>Durasi 30 menit pada intensitas moderat</p>
-          </div>
-        </div>
-      </div>
-      <h2>3. Yoga</h2>
-      <div class="program_yoga">
-        <div class="program1">
-          <div class="program1_image">
-            <img src="assets/Downward_Dog.jpg" alt="" />
-          </div>
-          <div class="program1_nama">
-            <h1>Downward Dog</h1>
-          </div>
-          <div class="program1_reps">
-            <p>Durasi 1 menit</p>
-          </div>
-        </div>
-        <div class="program2">
-          <div class="program2_image">
-            <img src="assets/Tree_Pose.jpg" alt="" />
-          </div>
-          <div class="program2_nama">
-            <h1>Tree Pose</h1>
-          </div>
-          <div class="program2_reps">
-            <p>Durasi 1 menit per sisi</p>
-          </div>
-        </div>
-        <div class="program3">
-          <div class="program3_image">
-            <img src="assets/Cobra_Pose.jpg" alt="" />
-          </div>
-          <div class="program3_nama">
-            <h1>Cobra Pose</h1>
-          </div>
-          <div class="program3_reps">
-            <p>Durasi 1 menit</p>
-          </div>
-        </div>
-      </div>
-      <h2>4. Latihan Fungsional</h2>
-      <div class="program_fungsional2">
-        <div class="program1">
-          <div class="program1_image">
-            <img src="assets/Kettlebell_Swings.jpg" alt="" />
-          </div>
-          <div class="program1_nama">
-            <h1>Kettlebell Swings</h1>
-          </div>
-          <div class="program1_reps">
-            <p>3 set x 15 reps</p>
-          </div>
-        </div>
-        <div class="program2">
-          <div class="program2_image">
-            <img src="assets/Box_Jumps.jpg" alt="" />
-          </div>
-          <div class="program2_nama">
-            <h1>Box Jumps</h1>
-          </div>
-          <div class="program2_reps">
-            <p>3 set x 10-12 reps</p>
-          </div>
-        </div>
-        <div class="program3">
-          <div class="program3_image">
-            <img src="assets/Battle_Ropes.jpg" alt="" />
-          </div>
-          <div class="program3_nama">
-            <h1>Battle Ropes</h1>
-          </div>
-          <div class="program3_reps">
-            <p>3 set x 30 detik</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- pola latihan start -->
+      <!-- info bmi start -->
+      <div class="info_bmi">
+        <div class="pola_makan_kurus">
+          <div class="title_makan">
+            <p>
+              Pola makan yang buruk dapat berkontribusi hingga 20-30% terhadap
+              risiko pengembangan berbagai penyakit.
+            </p>
+            <a href="">
+              <button>Konsultasi Dokter</button>
+            </a>
+          </div>
+          <div class="image_makan">
+            <img src="assets/menu_diet.jpg" alt="" />
+          </div>
+        </div>
+        <div class="pola_makan_ideal">
+          <div class="title_makan">
+            <p>
+              Berat badan Anda sudah ideal, tetaplah menjaga pola makan sehat
+              untuk mempertahankannya.
+            </p>
+            <a href="">
+              <button>Konsultasi Dokter</button>
+            </a>
+          </div>
+          <div class="image_makan">
+            <img src="assets/menu_diet.jpg" alt="" />
+          </div>
+        </div>
+        <div class="penyakit_obesitas">
+          <h4>Berat badan berlebih dapat menyebabkan berbagai penyakit</h4>
+          <div class="list_penyakit">
+            <div class="list1">
+              <ul>
+                <li>Penyakit jantung koroner</li>
+                <li>Tekanan darah tinggi</li>
+                <li>Diabetes tipe 2</li>
+              </ul>
+            </div>
+            <div class="list2">
+              <ul>
+                <li>Osteoartritis</li>
+                <li>Gangguan pernapasan</li>
+                <li>Stroke</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="penyakit_kurus">
+          <h4>Berat badan rendah dapat menyebabkan berbagai penyakit</h4>
+          <div class="list_penyakit">
+            <div class="list1">
+              <ul>
+                <li>Malnutrisi</li>
+                <li>Anemia</li>
+                <li>Osteoporosis</li>
+              </ul>
+            </div>
+            <div class="list2">
+              <ul>
+                <li>Kelelahan kronis</li>
+                <li>Amenore</li>
+                <li>Gangguan pertumbuhan</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="penyakit_ideal">
+          <h4>
+            Untuk menjaga berat badan ideal dan kualitas hidup, penting untuk
+            tetap sehat dengan pola makan seimbang, olahraga teratur, istirahat
+            cukup, dan manajemen stres yang baik.
+          </h4>
+        </div>
+      </div>
 
-  <!-- bmi main end -->
+      <!-- info bmi end-->
+    </section>
 
-  <footer>
-    <div class="logo_footer">
-      <img src="assets/logo_fito.png" width="100px" height="80px" />
-    </div>
+    <!-- pola latihan start -->
+    <section class="program_latihan">
+      <div class="program_obesitas">
+        <div class="title_program">
+          <h1>Program Menurunkan Berat Badan</h1>
+        </div>
+        <h2>1. Cardio</h2>
+        <div class="program_cardio">
+          <div class="program1">
+            <div class="program1_image">
+              <img src="assets/jogging.jpg" alt="" />
+            </div>
+            <div class="program1_nama">
+              <h1>Jalan Santai</h1>
+            </div>
+            <div class="program1_reps">
+              <p>Durasi 30 menit</p>
+            </div>
+          </div>
+          <div class="program2">
+            <div class="program2_image">
+              <img src="assets/berenang.jpg" alt="" />
+            </div>
+            <div class="program2_nama">
+              <h1>Berenang</h1>
+            </div>
+            <div class="program2_reps">
+              <p>Durasi 30 menit</p>
+            </div>
+          </div>
+          <div class="program3">
+            <div class="program3_image">
+              <img src="assets/sepeda_statis.jpg" alt="" />
+            </div>
+            <div class="program3_nama">
+              <h1>Sepeda Statis</h1>
+            </div>
+            <div class="program3_reps">
+              <p>Durasi 30 menit</p>
+            </div>
+          </div>
+        </div>
+        <h2>2. Latihan Kekuatan Tubuh Bagian Atas</h2>
+        <div class="program_atas">
+          <div class="program1">
+            <div class="program1_image">
+              <img src="assets/bicep_curl.jpg" alt="" />
+            </div>
+            <div class="program1_nama">
+              <h1>Bicep Curls</h1>
+            </div>
+            <div class="program1_reps">
+              <p>3 set x 12 - 15 reps</p>
+            </div>
+          </div>
+          <div class="program2">
+            <div class="program2_image">
+              <img src="assets/shoulder.jpg" alt="" />
+            </div>
+            <div class="program2_nama">
+              <h1>Shoulder Presess</h1>
+            </div>
+            <div class="program2_reps">
+              <p>3 set x 10 - 12 reps</p>
+            </div>
+          </div>
+          <div class="program3">
+            <div class="program3_image">
+              <img src="assets/lat_pulldown.jpg" alt="" />
+            </div>
+            <div class="program3_nama">
+              <h1>Lat Pulldowns</h1>
+            </div>
+            <div class="program3_reps">
+              <p>3 set x 12 - 15 reps</p>
+            </div>
+          </div>
+        </div>
+        <h2>3. Latihan Core Ringan</h2>
+        <div class="program_core">
+          <div class="program1">
+            <div class="program1_image">
+              <img src="assets/twist.jpg" alt="" />
+            </div>
+            <div class="program1_nama">
+              <h1>Russian Twists</h1>
+            </div>
+            <div class="program1_reps">
+              <p>3 set x 15 - 20 reps</p>
+            </div>
+          </div>
+          <div class="program2">
+            <div class="program2_image">
+              <img src="assets/plank.jpg" alt="" />
+            </div>
+            <div class="program2_nama">
+              <h1>Plank</h1>
+            </div>
+            <div class="program2_reps">
+              <p>3 set x 20 - 30 detik</p>
+            </div>
+          </div>
+          <div class="program3">
+            <div class="program3_image">
+              <img src="assets/sepeda_statis.jpg" alt="" />
+            </div>
+            <div class="program3_nama">
+              <h1>Leg Raises</h1>
+            </div>
+            <div class="program3_reps">
+              <p>3 set x 12 - 15 reps</p>
+            </div>
+          </div>
+        </div>
+        <h2>4. Latihan Fleksibilitas</h2>
+        <div class="program_fleksibel">
+          <div class="program1">
+            <div class="program1_image">
+              <img src="assets/hamstring.jpg" alt="" />
+            </div>
+            <div class="program1_nama">
+              <h1>Streching Hamstring</h1>
+            </div>
+            <div class="program1_reps">
+              <p>Durasi 2 - 3 menit</p>
+            </div>
+          </div>
+          <div class="program2">
+            <div class="program2_image">
+              <img src="assets/shoulder_stretches.jpg" alt="" />
+            </div>
+            <div class="program2_nama">
+              <h1>Shoulder Streching</h1>
+            </div>
+            <div class="program2_reps">
+              <p>Durasi 2 - 3 menit</p>
+            </div>
+          </div>
+          <div class="program3">
+            <div class="program3_image">
+              <img src="assets/sepeda_statis.jpg" alt="" />
+            </div>
+            <div class="program3_nama">
+              <h1>Hand Streching</h1>
+            </div>
+            <div class="program3_reps">
+              <p>Durasi 2 - 3 menit</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="program_kurus">
+        <div class="title_program">
+          <h1>Program Menaikkan Berat Badan</h1>
+        </div>
+        <h2>1. Angkat Beban</h2>
+        <div class="program_angkat_beban">
+          <div class="program1">
+            <div class="program1_image">
+              <img src="assets/bench_press.jpg" alt="" />
+            </div>
+            <div class="program1_nama">
+              <h1>Bench Press</h1>
+            </div>
+            <div class="program1_reps">
+              <p>4 set x 8-12 reps</p>
+            </div>
+          </div>
+          <div class="program2">
+            <div class="program2_image">
+              <img src="assets/Overhead_Press.jpg" alt="" />
+            </div>
+            <div class="program2_nama">
+              <h1>Overhead Press</h1>
+            </div>
+            <div class="program2_reps">
+              <p>4 set x 8-12 reps</p>
+            </div>
+          </div>
+          <div class="program3">
+            <div class="program3_image">
+              <img src="assets/Lunges.jpg" alt="" />
+            </div>
+            <div class="program3_nama">
+              <h1>Lunges</h1>
+            </div>
+            <div class="program3_reps">
+              <p>4 set x 10-15 reps per kaki</p>
+            </div>
+          </div>
+        </div>
+        <h2>2. Latihan HIIT</h2>
+        <div class="program_hiit">
+          <div class="program1">
+            <div class="program1_image">
+              <img src="assets/Burpees.jpg" alt="" />
+            </div>
+            <div class="program1_nama">
+              <h1>Burpees</h1>
+            </div>
+            <div class="program1_reps">
+              <p>30 detik kerja, 30 detik istirahat (ulang 8-10 kali)</p>
+            </div>
+          </div>
+          <div class="program2">
+            <div class="program2_image">
+              <img src="assets/Mountain_Climbers.jpg" alt="" />
+            </div>
+            <div class="program2_nama">
+              <h1>Mountain Climbers</h1>
+            </div>
+            <div class="program2_reps">
+              <p>30 detik kerja, 30 detik istirahat (ulang 8-10 kali)</p>
+            </div>
+          </div>
+          <div class="program3">
+            <div class="program3_image">
+              <img src="assets/Jump_Squats.jpg" alt="" />
+            </div>
+            <div class="program3_nama">
+              <h1>Jump Squats</h1>
+            </div>
+            <div class="program3_reps">
+              <p>30 detik kerja, 30 detik istirahat (ulang 8-10 kali)</p>
+            </div>
+          </div>
+        </div>
+        <h2>3. Latihan Fungsional</h2>
+        <div class="program_fungsional">
+          <div class="program1">
+            <div class="program1_image">
+              <img src="assets/Kettlebell_Swings.jpg" alt="" />
+            </div>
+            <div class="program1_nama">
+              <h1>Kettlebell Swings</h1>
+            </div>
+            <div class="program1_reps">
+              <p>3 set x 15 reps</p>
+            </div>
+          </div>
+          <div class="program2">
+            <div class="program2_image">
+              <img src="assets/Box_Jumps.jpg" alt="" />
+            </div>
+            <div class="program2_nama">
+              <h1>Box Jumps</h1>
+            </div>
+            <div class="program2_reps">
+              <p>3 set x 10-12 reps</p>
+            </div>
+          </div>
+          <div class="program3">
+            <div class="program3_image">
+              <img src="assets/Battle_Ropes.jpg" alt="" />
+            </div>
+            <div class="program3_nama">
+              <h1>Battle Ropes</h1>
+            </div>
+            <div class="program3_reps">
+              <p>3 set x 30 detik</p>
+            </div>
+          </div>
+        </div>
+        <h2>4. Latihan Core</h2>
+        <div class="program_core">
+          <div class="program1">
+            <div class="program1_image">
+              <img src="assets/Russian_Twists.jpg" alt="" />
+            </div>
+            <div class="program1_nama">
+              <h1>Russian Twists</h1>
+            </div>
+            <div class="program1_reps">
+              <p>3 set x 15-20 reps</p>
+            </div>
+          </div>
+          <div class="program2">
+            <div class="program2_image">
+              <img src="assets/Bicycle_Crunches.jpg" alt="" />
+            </div>
+            <div class="program2_nama">
+              <h1>Bicycle Crunches</h1>
+            </div>
+            <div class="program2_reps">
+              <p>3 set x 15-20 reps per sisi</p>
+            </div>
+          </div>
+          <div class="program3">
+            <div class="program3_image">
+              <img src="assets/Toe_Touches.jpg" alt="" />
+            </div>
+            <div class="program3_nama">
+              <h1>Toe Touches</h1>
+            </div>
+            <div class="program3_reps">
+              <p>3 set x 15-20 reps</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="program_menjaga">
+        <div class="title_program">
+          <h1>Program Menjaga Berat Badan</h1>
+        </div>
+        <h2>1. Latihan Kekuatan</h2>
+        <div class="program_kekuatan">
+          <div class="program1">
+            <div class="program1_image">
+              <img src="assets/Deadlifts.jpg" alt="" />
+            </div>
+            <div class="program1_nama">
+              <h1>Deadlifts</h1>
+            </div>
+            <div class="program1_reps">
+              <p>4 set x 6-10 reps</p>
+            </div>
+          </div>
+          <div class="program2">
+            <div class="program2_image">
+              <img src="assets/Pull-Ups.jpg" alt="" />
+            </div>
+            <div class="program2_nama">
+              <h1>Pull-Ups</h1>
+            </div>
+            <div class="program2_reps">
+              <p>4 set x 6-10 reps</p>
+            </div>
+          </div>
+          <div class="program3">
+            <div class="program3_image">
+              <img src="assets/Overhead_Press.jpg" alt="" />
+            </div>
+            <div class="program3_nama">
+              <h1>Overhead Press</h1>
+            </div>
+            <div class="program3_reps">
+              <p>4 set x 6-10 reps</p>
+            </div>
+          </div>
+        </div>
+        <h2>2. Cardio</h2>
+        <div class="program_kardio">
+          <div class="program1">
+            <div class="program1_image">
+              <img src="assets/berenang.jpg" alt="" />
+            </div>
+            <div class="program1_nama">
+              <h1>Berenang</h1>
+            </div>
+            <div class="program1_reps">
+              <p>Durasi 30 menit pada intensitas moderat</p>
+            </div>
+          </div>
+          <div class="program2">
+            <div class="program2_image">
+              <img src="assets/Rowing_Machine.jpg" alt="" />
+            </div>
+            <div class="program2_nama">
+              <h1>Rowing Machine</h1>
+            </div>
+            <div class="program2_reps">
+              <p>Durasi 20-30 menit</p>
+            </div>
+          </div>
+          <div class="program3">
+            <div class="program3_image">
+              <img src="assets/berlari.jpg" alt="" />
+            </div>
+            <div class="program3_nama">
+              <h1>Berlari</h1>
+            </div>
+            <div class="program3_reps">
+              <p>Durasi 30 menit pada intensitas moderat</p>
+            </div>
+          </div>
+        </div>
+        <h2>3. Yoga</h2>
+        <div class="program_yoga">
+          <div class="program1">
+            <div class="program1_image">
+              <img src="assets/Downward_Dog.jpg" alt="" />
+            </div>
+            <div class="program1_nama">
+              <h1>Downward Dog</h1>
+            </div>
+            <div class="program1_reps">
+              <p>Durasi 1 menit</p>
+            </div>
+          </div>
+          <div class="program2">
+            <div class="program2_image">
+              <img src="assets/Tree_Pose.jpg" alt="" />
+            </div>
+            <div class="program2_nama">
+              <h1>Tree Pose</h1>
+            </div>
+            <div class="program2_reps">
+              <p>Durasi 1 menit per sisi</p>
+            </div>
+          </div>
+          <div class="program3">
+            <div class="program3_image">
+              <img src="assets/Cobra_Pose.jpg" alt="" />
+            </div>
+            <div class="program3_nama">
+              <h1>Cobra Pose</h1>
+            </div>
+            <div class="program3_reps">
+              <p>Durasi 1 menit</p>
+            </div>
+          </div>
+        </div>
+        <h2>4. Latihan Fungsional</h2>
+        <div class="program_fungsional2">
+          <div class="program1">
+            <div class="program1_image">
+              <img src="assets/Kettlebell_Swings.jpg" alt="" />
+            </div>
+            <div class="program1_nama">
+              <h1>Kettlebell Swings</h1>
+            </div>
+            <div class="program1_reps">
+              <p>3 set x 15 reps</p>
+            </div>
+          </div>
+          <div class="program2">
+            <div class="program2_image">
+              <img src="assets/Box_Jumps.jpg" alt="" />
+            </div>
+            <div class="program2_nama">
+              <h1>Box Jumps</h1>
+            </div>
+            <div class="program2_reps">
+              <p>3 set x 10-12 reps</p>
+            </div>
+          </div>
+          <div class="program3">
+            <div class="program3_image">
+              <img src="assets/Battle_Ropes.jpg" alt="" />
+            </div>
+            <div class="program3_nama">
+              <h1>Battle Ropes</h1>
+            </div>
+            <div class="program3_reps">
+              <p>3 set x 30 detik</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="nav_footer">
-      <a href="index.html">Home</a>
-      <a href="index.html#manfaat">Solutions</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#artikel">Article</a>
-      <a href="index.html#footer">Contact</a>
-    </div>
+    <!-- pola latihan start -->
 
-    <div class="sosmed">
-      <i class="bx bxl-whatsapp"></i>
-      <i class="bx bxl-instagram"></i>
-      <i class="bx bxl-tiktok"></i>
-      <i class="bx bx-envelope"></i>
-      <i class="bx bxl-twitter"></i>
-    </div>
+    <!-- bmi main end -->
 
-    <div class="Copyright">
-      <p style="font-weight: bold">Copyright &copy; 2024 | FiTo</p>
-    </div>
-  </footer>
-</body>
+    <footer>
+      <div class="logo_footer">
+        <img src="assets/logo_fito.png" width="100px" height="80px" />
+      </div>
 
+      <div class="nav_footer">
+        <a href="index.html">Home</a>
+        <a href="index.html#manfaat">Solutions</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#artikel">Article</a>
+        <a href="index.html#footer">Contact</a>
+      </div>
+
+      <div class="sosmed">
+        <i class="bx bxl-whatsapp"></i>
+        <i class="bx bxl-instagram"></i>
+        <i class="bx bxl-tiktok"></i>
+        <i class="bx bx-envelope"></i>
+        <i class="bx bxl-twitter"></i>
+      </div>
+
+      <div class="Copyright">
+        <p style="font-weight: bold">Copyright &copy; 2024 | FiTo</p>
+      </div>
+    </footer>
+  </body>
 </html>

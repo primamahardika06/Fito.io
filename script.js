@@ -1,12 +1,10 @@
 // BMI Start
 
-// Fungsi untuk membatasi panjang input
 function limitInputLength(element, maxLength) {
   element.addEventListener("input", function () {
-    // Hanya membatasi angka jika lebih dari maxLength
-    let value = this.value.replace(/\D/g, ""); // Menghapus karakter non-digit
+    let value = this.value.replace(/\D/g, "");
     if (value.length > maxLength) {
-      value = value.slice(0, maxLength); // Mengambil hanya maxLength karakter
+      value = value.slice(0, maxLength);
     }
     this.value = value;
   });
@@ -14,24 +12,22 @@ function limitInputLength(element, maxLength) {
 
 // Fungsi untuk menghitung BMI
 function calculateBMI() {
-  // Mendapatkan nilai input dari form
+
   const weight = parseFloat(document.getElementById("weightInput").value);
   const height = parseFloat(document.getElementById("heightInput").value);
 
-  // Validasi input
   if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
     alert("Mohon masukkan nilai berat dan tinggi yang valid.");
     return;
   }
 
   // Menghitung BMI
-  const heightInMeters = height / 100; // Mengubah tinggi dari cm ke meter
+  const heightInMeters = height / 100;
   const bmi = weight / (heightInMeters * heightInMeters);
 
   // Menampilkan hasil
   document.getElementById("bmi").textContent = bmi.toFixed(2);
 
-  // Reset semua elemen yang ingin disembunyikan atau ditampilkan
   const elementsToHide = [
     ".pola_makan_kurus",
     ".penyakit_kurus",
@@ -46,7 +42,6 @@ function calculateBMI() {
     document.querySelector(selector).style.display = "none";
   });
 
-  // Menentukan kategori BMI dan saran serta menampilkan elemen yang sesuai
   let description = "";
   let suggestion = "";
   
@@ -112,17 +107,14 @@ function calculateBMI() {
   document.getElementById("desc").textContent = description;
   document.querySelector(".bmi_saran").textContent = suggestion;
 
-  // Menampilkan elemen hasil
   document.querySelector(".bmi_hasil").classList.remove("hidden");
 
-  // Mengubah tombol menjadi tombol reset
   const button = document.querySelector(".button_bmi button");
   button.textContent = "Cek Ulang";
   button.onclick = function() {
     resetForm();
   };
 
-  // Membatasi input hanya 3 digit
   const heightInput = document.getElementById("heightInput");
   const weightInput = document.getElementById("weightInput");
 
@@ -132,17 +124,14 @@ function calculateBMI() {
 
 // Fungsi untuk mereset form
 function resetForm() {
-  // Reset form: Mengosongkan inputan
   document.getElementById("bmiForm").reset();
 
-  // Mengembalikan tombol menjadi "Cek Sekarang"
   const button = document.querySelector(".button_bmi button");
   button.textContent = "Cek Sekarang";
   button.onclick = function() {
     calculateBMI();
   };
 
-  // Menyembunyikan hasil BMI dan semua elemen terkait
   document.querySelector(".bmi_hasil").classList.add("hidden");
 
   const elementsToHide = [
@@ -159,7 +148,6 @@ function resetForm() {
     document.querySelector(selector).style.display = "none";
   });
 
-  // Mengosongkan inputan dan menyembunyikan hasil BMI
   document.getElementById("bmi").textContent = "";
   document.getElementById("desc").textContent = "";
   document.querySelector(".bmi_saran").textContent = "";
@@ -168,25 +156,45 @@ function resetForm() {
 
 // BMI End
 
-// Loader Start
+// Loader & Typing text Start
 document.addEventListener("DOMContentLoaded", function () {
   const loaderContainer = document.querySelector(".loader-container");
   const loaderVideo = loaderContainer.querySelector("video");
 
   loaderVideo.play();
 
+  function startTypingEffect() {
+    const textElement = document.getElementById("typing-effect");
+    const text = textElement.textContent;
+    textElement.textContent = "";
+    let index = 0;
+
+    function typeText() {
+      if (index < text.length) {
+        textElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeText, 200);
+      }
+    }
+
+    typeText();
+  }
   loaderVideo.onended = function () {
     document.body.classList.add("loaded");
+    startTypingEffect(); 
   };
+
 
   window.addEventListener("load", function () {
     setTimeout(function () {
       document.body.classList.add("loaded");
-    }, 6500);
+      startTypingEffect();
+    }, 6500); 
   });
 });
 
-// Loader End
+
+// Loader & Typing text End
 
 // artikel start
 function toggleSelengkapnya() {
@@ -209,17 +217,15 @@ function toggleSelengkapnya() {
 
 // icon di klik start
 document.addEventListener("DOMContentLoaded", function () {
-  // Ambil elemen tombol
+
   const btnPria = document.querySelector("#genderPria button");
   const btnWanita = document.querySelector(".gender_wanita button");
 
-  // Fungsi untuk mengaktifkan tombol Pria dan menonaktifkan tombol Wanita
   btnPria.addEventListener("click", function () {
     btnPria.classList.add("active");
     btnWanita.classList.remove("active");
   });
 
-  // Fungsi untuk mengaktifkan tombol Wanita dan menonaktifkan tombol Pria
   btnWanita.addEventListener("click", function () {
     btnWanita.classList.add("active");
     btnPria.classList.remove("active");
@@ -266,4 +272,24 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Hamburger End
+
+// sticky navbar start
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.getElementById("navbar");
+  const stickyThreshold = 500;
+
+  function makeNavbarSticky() {
+      if (window.pageYOffset >= stickyThreshold) {
+          navbar.classList.add("sticky");
+      } else {
+          navbar.classList.remove("sticky");
+      }
+  }
+
+  window.onscroll = function () {
+      makeNavbarSticky();
+  };
+});
+// sticky navbar end
 

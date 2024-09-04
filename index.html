@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="Icon" type="Icon" href="assets/logo_fito.png">
     <script src="script.js"></script>
     <title>FITO</title>
 </head>
@@ -21,7 +22,7 @@
 
 
     <!-- Nav Start -->
-    <nav>
+    <nav id="navbar">
         <div class="title">
             <a href="#">
                 <img src="assets/logo_fito.png" alt="">
@@ -32,15 +33,16 @@
 
 
         <div class="Navbar">
-            <a href="#"><i class='bx bx-home'> </i>Home</a>
-            <a href="#manfaat"><i class='bx bx-bulb'> </i>Solutions</a>
-            <a href="#about"><i class='bx bx-conversation'> </i>About</a>
-            <a href="#artikel"><i class='bx bx-news'> </i>Article</a>
-            <a href="#footer"><i class='bx bx-phone'> </i>Contact</a>
+            <a href="#"><i class='bx bx-home'></i>Home</a>
+            <a href="#manfaat"><i class='bx bx-bulb'></i>Solutions</a>
+            <a href="#about"><i class='bx bx-conversation'></i>About</a>
+            <a href="#artikel"><i class='bx bx-news'></i>Article</a>
+            <a href="#footer"><i class='bx bx-phone'></i>Contact</a>
             <a href="bmi.html">
                 <button>MULAI <i class='bx bx-rocket'></i></button>
             </a>
         </div>
+        
 
         <div class="nav_hamburger">
             <a href="#"><i class='bx bx-home'> </i>Home</a>
@@ -63,14 +65,14 @@
     <!-- Hero Section Start -->
     <section class="hero_section">
         <div class="teks">
-            <h1>HALO!</h1>
+            <h1 id="typing-effect">HALO!</h1>
             <p>Cek Indeks Massa Tubuhmu Dulu Yuk !</p>
             <a href="bmi.html">
                 <button>MULAI UKUR</button>
             </a>
         </div>
         <div class="konsultasi">
-            <a href="">
+            <a href="https://chatgpt.com/" target="_blank">
                 <div class="detail_konsultasi">
                     <img src="assets/doctor.png" alt="">
                     <h3>Yuk Konsultasi Sekarang!</h3>
@@ -78,6 +80,7 @@
             </a>
         </div>
     </section>
+    
     <!-- Hero Section End -->
 
     <!-- Konsultasi start -->
@@ -456,8 +459,6 @@
                     </div>
                 </div>
 
-                <button id="read-more" onclick="toggleSelengkapnya()">Baca Selengkapnya</button>
-
                 <div class="selengkapnya klik">
                     <div class="card_artikel">
                         <a
@@ -612,6 +613,8 @@
                         </a>
                     </div>
                 </div>
+
+                <button id="read-more" onclick="toggleSelengkapnya()">Baca Selengkapnya</button>
 
             </div>
     </section>

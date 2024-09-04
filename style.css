@@ -29,7 +29,8 @@ nav {
   padding: 24px 40px;
   width: 100%;
   z-index: 999;
-  background-color: white;
+  /* backdrop-filter: blur(5px); */
+  background-color: whitesmoke;
   position: fixed;
 }
 
@@ -101,6 +102,12 @@ nav a {
 .Navbar a:hover {
   color: var(--color-green);
   border-bottom: 1px solid black solid var(--color-green);
+}
+
+nav.sticky {
+ background-color: white;
+ transition: .5s;
+ padding: 20px 32px;
 }
 
 /* Nav End */
@@ -176,10 +183,11 @@ section.hero_section {
   align-items: center;
   font-family: var(--font-family2);
   justify-content: center;
-  color: whitesmoke;
   width: 100%;
   height: 100vh;
-  background-color: var(--color-green2);
+  background-image: url(assets/bg-landing-page.jpeg);
+  background-position: center;
+  background-size: cover;
 }
 
 section.hero_section .teks {
@@ -187,18 +195,25 @@ section.hero_section .teks {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  padding: 20px 32px;
   margin-bottom: 20px;
   text-decoration: none;
+  backdrop-filter: blur(4px);
+  /* background-color:rgba(255, 255, 255, 0.201); */
+  border-radius: 12px;
 }
 
 section.hero_section .teks h1 {
   text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.559);
   font-size: 80px;
+  color: whitesmoke;
 }
 
 section.hero_section .teks p {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 200;
+  color: whitesmoke;
+  font-weight: bold;
 }
 
 section.hero_section .teks button {
@@ -575,6 +590,8 @@ section.artikel_section {
 }
 
 .detail_sumber2 .sumber {
+  display: flex;
+  align-items: center;
   padding: 0px 8px;
   border-radius: 4px;
   background-color: var(--color-green);
@@ -1033,7 +1050,7 @@ body.loaded .loader-container {
 /* Footer Start */
 footer {
   display: flex;
-  margin-top: 50vh;
+  margin-top: 20vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -2330,6 +2347,10 @@ section.second_section .mobile_card {
 
   .detail_sumber2 .tanggal {
     font-size: 8px;
+  }
+
+  section.hero_section .teks {
+    padding: 20px 28px;
   }
 
   section.hero_section .teks h1 {

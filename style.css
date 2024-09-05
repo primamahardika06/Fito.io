@@ -198,7 +198,7 @@ section.hero_section .teks {
   padding: 20px 32px;
   margin-bottom: 20px;
   text-decoration: none;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(10px);
   /* background-color:rgba(255, 255, 255, 0.201); */
   border-radius: 12px;
 }

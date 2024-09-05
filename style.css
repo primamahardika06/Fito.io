@@ -195,29 +195,30 @@ section.hero_section .teks {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 20px 32px;
+  width: 63%;
+  padding: 60px 0;
   margin-bottom: 20px;
   text-decoration: none;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
   /* background-color:rgba(255, 255, 255, 0.201); */
   border-radius: 12px;
 }
 
 section.hero_section .teks h1 {
-  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.559);
+  text-shadow: 2px 2px 0px #589e54;
   font-size: 80px;
   color: whitesmoke;
 }
 
 section.hero_section .teks p {
   font-size: 20px;
-  font-weight: 200;
+  text-shadow: 2px 2px 0px #589e54;
   color: whitesmoke;
   font-weight: bold;
 }
 
 section.hero_section .teks button {
-  box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.228);
+  box-shadow: 2px 4px 0px 0px #589e54;
   border: none;
   border-radius: 8px;
   padding: 8px 60px;
@@ -565,11 +566,13 @@ section.artikel_section {
   padding-bottom: 8px;
   width: 300px;
   border-radius: 12px;
-  transition: 0.5s;
 }
 
-.card_artikel:hover {
-  transform: scale(0.9);
+.card_artikel h3 {
+  transition: 0.5s;
+}
+.card_artikel h3:hover {
+  color: #589e54;
 }
 
 .card_artikel a {
@@ -606,7 +609,7 @@ section.artikel_section {
   display: grid;
   display: none;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 20px;
 }
 
 .selengkapnya img {
@@ -1050,13 +1053,12 @@ body.loaded .loader-container {
 /* Footer Start */
 footer {
   display: flex;
-  margin-top: 20vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-top: 1px solid #589e54;
-  padding-top: 20px;
   gap: 12px;
+  padding-top: 20px;
 }
 
 .nav_footer {
@@ -2350,11 +2352,25 @@ section.second_section .mobile_card {
   }
 
   section.hero_section .teks {
-    padding: 20px 28px;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    width: 80%;
+    /* text-align: center; */
   }
 
   section.hero_section .teks h1 {
     font-size: 30px;
+  }
+
+  section.hero_section .teks p {
+    font-size: 14px;
+  }
+
+  section.hero_section .teks button {
+    padding: 4px 50px;
+    font-size: 12px;
   }
 
   .detail_konsultasi {

@@ -293,3 +293,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // sticky navbar end
 
+// animasi on scroll start
+
+window.addEventListener('scroll', function() {
+  var elements = document.querySelectorAll('.zoom-in-box');
+
+  elements.forEach(function(element) {
+    var position = element.getBoundingClientRect();
+
+    if (position.top < window.innerHeight && position.bottom >= 0) {
+      element.classList.add('show');
+    } else {
+      element.classList.remove('show');
+    }
+  });
+});
+
+
+// animasi on scroll end
+
+
+
+

@@ -8,7 +8,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="Icon" type="Icon" href="assets/logo_fito.png">
-  <link rel="stylesheet" href="dist/aos.css">
   <title>BMI Test</title>
 </head>
 
@@ -60,7 +59,7 @@
 
     <div class="bmi_gender">
       <div class="gender_pria" id="genderPria">
-        <div  data-aos="flip-up" data-aos-duration="1000" class="img_pria">
+        <div class="img_pria">
           <button>
             <img src="assets/man.png" alt="Pria" />
             <p>Pria<i class="bx bx-male-sign"></i></p>
@@ -68,7 +67,7 @@
         </div>
       </div>
       <div class="gender_wanita">
-        <div  data-aos="flip-up" data-aos-duration="1000" class="img_wanita">
+        <div class="img_wanita">
           <button>
             <img src="assets/women.png" alt="" />
             <p>Wanita<i class="bx bx-female-sign"></i></p>
@@ -78,10 +77,10 @@
     </div>
 
     <form class="bmi_input" id="bmiForm">
-      <div class="img_bmi" data-aos="flip-right" data-aos-duration="1000">
+      <div class="img_bmi zoom-in-box">
         <img src="assets/bg-bmi.jpg" alt="" />
       </div>
-      <div class="input" data-aos="flip-left" data-aos-duration="1000">
+      <div class="input zoom-in-box">
         <div class="bmi_tinggi" id="height">
           <p>Tinggi Badan :</p>
           <input id="heightInput" type="number" placeholder="Berapa Tinggi Kamu (cm)" />
@@ -711,9 +710,5 @@
 </body>
 
 <script src="script.js"></script>
-<script src="dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
 
 </html>
